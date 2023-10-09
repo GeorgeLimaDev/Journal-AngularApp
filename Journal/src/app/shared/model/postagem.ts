@@ -4,17 +4,28 @@ import {Comentario} from "./comentario";
 export class Postagem {
   constructor(
     private _autor: Usuario,
+    private _link: string = '',
     private _titulo: string,
     private _conteudo: string,
     private _timestamp: string,
     private _comentarios: Comentario[] = []
-  ) {}
+  ) {
+    this._link = this.linkPost();
+  }
 
   get autor(): Usuario {
     return this._autor;
   }
   set autor(novoAutor: Usuario) {
     this._autor = novoAutor;
+  }
+
+  get link() {
+    return this._link;
+  }
+
+  set link(novoLink) {
+    this._link = this.linkPost();
   }
 
   linkPost() {

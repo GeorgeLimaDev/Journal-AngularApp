@@ -4,9 +4,9 @@ import {Postagem} from "./postagem";
 
 export class Usuario {
   constructor(
-    private _nickname: string,
+    private _nickname: string, //Não pode conter espaços.
     private _senha: string,
-    private _link: string,
+    private _link: string = '',
     private _nome: string,
     private _email: string,
     private _postagens: Postagem[] = [],
@@ -38,6 +38,7 @@ export class Usuario {
   }
   set link(newLink: string) {
     this._link = newLink;
+    this._nickname = this.updateLink(newLink);
   }
 
   updateLink(novoNickname: string) {
