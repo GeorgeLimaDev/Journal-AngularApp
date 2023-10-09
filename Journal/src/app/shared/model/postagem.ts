@@ -1,19 +1,14 @@
 import {Usuario} from "./usuario";
 import {Comentario} from "./comentario";
 
-//Pendente: fazer métodos add, del e loc para os atributos de arrays.
-
 export class Postagem {
   constructor(
     private _autor: Usuario,
-    private _link: string,
     private _titulo: string,
     private _conteudo: string,
     private _timestamp: string,
-    private _comentarios: Comentario[]
-  ) {
-    this._link = `www.journal.app/${_autor.nickname}/post` //terminar com um número auto-incrementado.
-  }
+    private _comentarios: Comentario[] = []
+  ) {}
 
   get autor(): Usuario {
     return this._autor;
@@ -22,12 +17,13 @@ export class Postagem {
     this._autor = novoAutor;
   }
 
-  get link(): string {
-    return this._link;
+  linkPost() {
+    const numeroDePosts = this._autor.postagens.length;
+    if (numeroDePosts === 0) {
+      return `www.journal.app/${this._autor.nome}/1`;
+    }
+    return `www.journal.app/${this._autor.nome}/${numeroDePosts+1}`
   }
-  set link(novoLink: string) {
-    this._link = novoLink;
-  } //Verificar implementação do auto-incremento.
 
   get titulo(): string {
     return this._titulo;
@@ -55,6 +51,17 @@ export class Postagem {
   }
   set comentarios(value: Comentario[]) {
     this._comentarios = value;
+  } //Acho que não vai ser necessário.
+
+  addComentario(novoComentario: Comentario) {
+    this._comentarios.push(novoComentario);
+  }
+
+  delComentario(comentarioADeletar: Comentario) {
+    const index = this._comentarios.findIndex((comentario) => comentario === comentarioADeletar);
+    if (index !== -1) {
+      this._comentarios.splice(index, 1);
+    }
   }
 
 }

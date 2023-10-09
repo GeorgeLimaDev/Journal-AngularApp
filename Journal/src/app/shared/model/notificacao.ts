@@ -3,7 +3,7 @@ import {Solicitacao} from "./solicitacao";
 export class Notificacao {
   constructor(
     private _Timestamp: string,
-    private _Lida: boolean
+    private _Lida: boolean = false
   ) {}
 
   get Timestamp(): string {
@@ -13,12 +13,11 @@ export class Notificacao {
     this._Timestamp = novoTimestamp;
   }
 
-  // Getter and Setter methods for _Lida
   get Lida(): boolean {
     return this._Lida;
   }
-  set Lida(novoLida: boolean) {
-    this._Lida = novoLida;
-  }
+  set Lida(lida: boolean) {
+    this._Lida = lida;
+  } //Usar quando o usuário clicar em uma notificação, ela vai receber lida = true.
 
 }

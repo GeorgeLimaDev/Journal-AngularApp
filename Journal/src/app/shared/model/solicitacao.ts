@@ -5,13 +5,10 @@ export class Solicitacao extends Notificacao {
   constructor(
     private _solicitante: Usuario,
     private _solicitado: Usuario,
-    private _status: string,
+    private _status: string, //Pode ser: Pendente, aceita, recusada.
     private _SolTimestamp: string,
     private _SolLida: boolean
-
-  ) {
-    super(_SolTimestamp, _SolLida);
-  }
+  ) {super(_SolTimestamp, _SolLida)}
 
   get solicitante(): Usuario {
     return this._solicitante;
@@ -31,22 +28,10 @@ export class Solicitacao extends Notificacao {
     return this._status;
   }
   set status(novoStatus: string) {
-    this._status = novoStatus;
-  }
-
-  get SolTimestamp(): string {
-    return this._SolTimestamp;
-  }
-  set SolTimestamp(novoSolTimestamp: string) {
-    this._SolTimestamp = novoSolTimestamp;
-  }
-
-  // Getter and Setter methods for _SolLida
-  get SolLida(): boolean {
-    return this._SolLida;
-  }
-  set SolLida(novoSolLida: boolean) {
-    this._SolLida = novoSolLida;
-  }
+    const statusPossiveis = ['pendente', 'aceita', 'recusada'];
+    if (statusPossiveis.includes(novoStatus)) {
+      this._status = novoStatus;
+    }
+  } //Como lidar com uma exceção aqui?
 
 }
