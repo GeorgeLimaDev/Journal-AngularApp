@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;800&family=Satisfy&display=swap');
+@font-face { font-family: "Satisfy"; src: url(https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;800&family=Satisfy&display=swap);
+}
+
+:root {
+  --background-color: #F5F0DC;
+  --accent-color-1: #D2ED2F;
+  --accent-color-2: #66290A;
+  --text-style-accent: 'Satisfy', cursive;;
+  --text-color-black: #000000;
+  --text-color-accent: #F5F0DC;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.landing-page {
+  height: 100vh;
+  background-color: #F5F0DC;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #66290A;
+  border-radius: 0 0 10px 10px;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+  color: white;
+}
+
+.right {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: white;
+}
+
+.right p {
+  margin-left: 20px;
+  margin-right: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.right p:hover {
+  font-size: 110%;
+}
+
+.logo {
+  font-family: "Satisfy", cursive;
+  font-size: 2rem;
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logo:hover {
+  font-size: 2.3rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  width: 50%;
+  border: 1px solid #D2ED2F; //This will be replaced by the background_art.jpg image. For now it is not compiling with it.
+  border-radius: 20px;
+  margin: 5% auto;
+}
+
+
+h1 {
+  font-family: "Satisfy", cursive;
+  font-size: 7rem;
+  padding: 3rem;
+  transition: all 0.3s ease;
+}
+
+h1:hover {
+  font-size: 7.5rem;
+}
+
+h3 {
+  padding: 0.5rem;
+}
+
+button {
+  background-color: transparent;
+  border: 1.5px solid #D2ED2F;
+  padding: 1rem;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  width: 200px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #D2ED2F;
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  color: white;
+  padding: 1rem;
+  background-color: #66290A;
+  margin-top: 14.6rem;
+  border-radius: 10px 10px 0 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+
