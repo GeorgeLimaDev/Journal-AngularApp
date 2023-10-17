@@ -7,7 +7,7 @@ export class Postagem {
     private _link: string = '',
     private _titulo: string,
     private _conteudo: string,
-    private _timestamp: string,
+    private _timestamp: number,
     private _comentarios: Comentario[] = []
   ) {
     this._link = this.linkPost();
@@ -31,9 +31,9 @@ export class Postagem {
   linkPost() {
     const numeroDePosts = this._autor.postagens.length;
     if (numeroDePosts === 0) {
-      return `www.journal.app/${this._autor.nome}/1`;
+      return `www.journal.app/${this._autor.nickname}/1`;
     }
-    return `www.journal.app/${this._autor.nome}/${numeroDePosts+1}`
+    return `www.journal.app/${this._autor.nickname}/${numeroDePosts+1}`
   }
 
   get titulo(): string {
@@ -50,10 +50,10 @@ export class Postagem {
     this._conteudo = novoConteudo;
   }
 
-  get timestamp(): string {
+  get timestamp(): number {
     return this._timestamp;
   }
-  set timestamp(novoTimestamp: string) {
+  set timestamp(novoTimestamp: number) {
     this._timestamp = novoTimestamp;
   }
 
@@ -74,5 +74,17 @@ export class Postagem {
       this._comentarios.splice(index, 1);
     }
   }
+
+  toString(): string {
+    return `
+    Autor: ${this.autor.nome}
+    Link: ${this.link}
+    Titulo: ${this.titulo}
+    Conteudo: ${this.conteudo}
+    Timestamp: ${this.timestamp}
+    Comentários: ${this.comentarios.length}
+    `
+  }
+
 
 }

@@ -156,4 +156,20 @@ export class Usuario {
     this._logado = value;
   } //Utilizar ao fazer o login (rece true) ou logout (recebe false).
 
+  toString(): string {
+    return `
+    Nickname: ${this.nickname}
+    Senha: ${this.senha}
+    Link: ${this.link}
+    Nome: ${this.nome}
+    Email: ${this.email}
+    Postagens: ${this.postagens.length}
+    Seguidores: ${this.seguidores.length}
+    Seguindo: ${this.seguindo.length}
+    Solicitações: ${this.solicitacoes.length}
+    Notificações: ${this.notificacoes.length}
+    Logado: ${this.logado}
+    `
+  }
+
 }
