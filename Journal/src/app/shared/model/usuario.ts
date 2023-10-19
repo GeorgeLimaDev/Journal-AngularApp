@@ -62,6 +62,10 @@ export class Usuario {
   get postagens(): Postagem[] {
     return this._postagens;
   }
+
+  countPostagens(): number {
+    return this._postagens.length;
+  }
   set postagens(value: Postagem[]) {
     this._postagens = value;
   } //Acho que não vai ser necessário.
