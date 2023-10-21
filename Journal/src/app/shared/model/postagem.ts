@@ -25,15 +25,11 @@ export class Postagem {
   }
 
   set link(novoLink) {
-    this._link = this.linkPost();
+    this._link = novoLink;
   }
 
   linkPost() {
-    const numeroDePosts = this._autor.countPostagens(); //O problema está aqui. Essa variável recebo zero, mesmo já tendo postagens no array.
-    if (numeroDePosts === 0) {
-      return `www.journal.app/${this._autor.nickname}/1`;
-    }
-    return `www.journal.app/${this._autor.nickname}/${numeroDePosts+5}`
+    return `www.journal.app/${this._autor.nickname}/${this._autor.countPostagens()+1}`
   }
 
   get titulo(): string {
@@ -85,6 +81,5 @@ export class Postagem {
     Comentários: ${this.comentarios.length}
     `
   }
-
 
 }

@@ -24,7 +24,7 @@ export class Usuario {
   set nickname(novoNickname: string) {
     this._nickname = novoNickname;
     this._link = this.updateLink(novoNickname); //Caso o usuário defina um novo nickname seu link é atualizado junto.
-  } //É possível fazer a operação da linha anterior usando o método set padrão de _link?
+  }
 
   get senha(): string {
     return this._senha;
@@ -64,7 +64,7 @@ export class Usuario {
   }
 
   countPostagens(): number {
-    return this._postagens.length;
+    return this.postagens.length;
   }
   set postagens(value: Postagem[]) {
     this._postagens = value;
@@ -158,7 +158,7 @@ export class Usuario {
   }
   set logado(value: boolean) {
     this._logado = value;
-  } //Utilizar ao fazer o login (rece true) ou logout (recebe false).
+  } //Utilizar ao fazer o login (recebe true), ou logout (recebe false).
 
   toString(): string {
     return `
