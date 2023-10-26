@@ -1,36 +1,45 @@
 <h2 mat-dialog-title>Hop in to Journal!</h2>
+<!--<button mat-button [mat-dialog-close]="true" cdkFocusInitial><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="cancel"></mat-icon>-->
+<!--</button>-->
 <mat-dialog-content class="mat-typography">
+  <div class="left">
   <h3>Fill this form to create an account</h3>
   <mat-form-field>
     <mat-label>Nickname</mat-label>
     <input matInput>
   </mat-form-field>
+    <br>
   <mat-form-field>
     <mat-label>Senha</mat-label>
     <input matInput type="password">
   </mat-form-field>
+    <br>
   <mat-form-field>
     <mat-label>Nome</mat-label>
     <input matInput>
   </mat-form-field>
+    <br>
   <mat-form-field>
     <mat-label>Email</mat-label>
     <input matInput>
   </mat-form-field>
+    <br>
   <button>Create account</button>
-
-  <h3>Already have an account? Sign in to it.</h3>
+  </div>
+  <div class="right">
+  <h3>Already have an account? Log in to it.</h3>
   <mat-form-field>
     <mat-label>Nickname</mat-label>
     <input matInput>
   </mat-form-field>
+    <br>
   <mat-form-field>
     <mat-label>Password</mat-label>
     <input matInput type="password">
   </mat-form-field>
+    <br>
 <button>Login</button>
+  </div>
 </mat-dialog-content>
 <mat-dialog-actions align="end">
-  <button mat-button mat-dialog-close>Cancel</button>
-  <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Install</button>
 </mat-dialog-actions>
