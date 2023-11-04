@@ -14,11 +14,34 @@ export class AppComponent {
   title = 'Journal';
   usuarios: Usuario[] = USUARIOS;
   postagens: Postagem[] = POSTAGENS;
-  constructor(private dialogService: DialogService) { }
+  postagemRegistering: Postagem = new Postagem((new Usuario('', '', '', '', '')), '', '', '', 0);
+  canEdit = false;
+  addPostagem() {
+    if (this.canEdit) {
+      this.canEdit = false;
+      this.postagemRegistering = new Postagem((new Usuario('', '', '', '', '')), '', '', '', 0);
+    } else {
+      this.postagens.push(this.postagemRegistering);
+      this.postagemRegistering = new Postagem((new Usuario('', '', '', '', '')), '', '', '', 0);
+    }
+  }
+
+  editPostagem(postagemToEdit: Postagem) {
+    this.canEdit = true;
+    this.postagemRegistering = postagemToEdit;
+  }
+
+  delPostagem(postagemADeletar: Postagem) {
+    const index = this.postagens.findIndex((postagem) => postagem === postagemADeletar);
+    if (index !== -1) {
+      this.postagens.splice(index, 1);
+    }
+  }
+
+  constructor(private dialogService: DialogService) {
+  }
+
   openDialog(): void {
     this.dialogService.openDialog();
   }
 }
-
-let usuarios = USUARIOS;
-let postagens: Postagem[] = POSTAGENS;

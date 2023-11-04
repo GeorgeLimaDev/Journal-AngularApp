@@ -1,44 +1,46 @@
 <h2 mat-dialog-title>Hop in to Journal!</h2>
-<!--<button mat-button [mat-dialog-close]="true" cdkFocusInitial><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="cancel"></mat-icon>-->
-<!--</button>-->
 <mat-dialog-content class="mat-typography">
   <div class="left">
-  <h3>Fill this form to create an account</h3>
-  <mat-form-field>
-    <mat-label>Nickname</mat-label>
-    <input matInput>
-  </mat-form-field>
-    <br>
-  <mat-form-field>
-    <mat-label>Senha</mat-label>
-    <input matInput type="password">
-  </mat-form-field>
-    <br>
-  <mat-form-field>
-    <mat-label>Nome</mat-label>
-    <input matInput>
-  </mat-form-field>
-    <br>
-  <mat-form-field>
-    <mat-label>Email</mat-label>
-    <input matInput>
-  </mat-form-field>
-    <br>
-  <button>Create account</button>
+    <h3>Fill this form to create an account</h3>
+    <form>
+      <mat-form-field>
+        <mat-label>Nickname</mat-label>
+        <input matInput [(ngModel)]="userRegistering.nickname" name="nickname" required>
+      </mat-form-field>
+      <br>
+      <mat-form-field>
+        <mat-label>Senha</mat-label>
+        <input matInput [(ngModel)]="userRegistering.senha" type="password" name="senha" required>
+      </mat-form-field>
+      <br>
+      <mat-form-field>
+        <mat-label>Nome</mat-label>
+        <input matInput [(ngModel)]="userRegistering.nome" name="nome" required>
+      </mat-form-field>
+      <br>
+      <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input matInput [(ngModel)]="userRegistering.email" name="email" required>
+      </mat-form-field>
+      <br>
+      <button (click)="addUsuario()">Create account</button>
+    </form>
   </div>
   <div class="right">
-  <h3>Already have an account? Log in to it.</h3>
-  <mat-form-field>
-    <mat-label>Nickname</mat-label>
-    <input matInput>
-  </mat-form-field>
-    <br>
-  <mat-form-field>
-    <mat-label>Password</mat-label>
-    <input matInput type="password">
-  </mat-form-field>
-    <br>
-<button>Login</button>
+    <h3>Already have an account? Log in to it.</h3>
+    <form>
+      <mat-form-field>
+        <mat-label>Nickname</mat-label>
+        <input matInput name="loginNickname" required>
+      </mat-form-field>
+      <br>
+      <mat-form-field>
+        <mat-label>Password</mat-label>
+        <input matInput type="password" name="loginPassword" required>
+      </mat-form-field>
+      <br>
+      <button type="submit">Login</button>
+    </form>
   </div>
 </mat-dialog-content>
 <mat-dialog-actions align="end">
