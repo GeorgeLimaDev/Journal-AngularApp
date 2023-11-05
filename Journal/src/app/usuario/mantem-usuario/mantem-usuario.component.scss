@@ -1,0 +1,21 @@
+.left {
+  flex-direction: column;
+}
+
+button {
+  background-color: transparent;
+  border: 1.5px solid #77D956;
+  padding: 1rem;
+  border-radius: 40px;
+  transition: all 0.3s ease;
+  width: 200px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #77D956;
+  font-weight: bold;
+  color: white;
+}

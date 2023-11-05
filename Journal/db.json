@@ -1,0 +1,15 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nickname": "georgelimadev",
+      "senha": "password123",
+      "link": "",
+      "nome": "George Lima",
+      "email": "georgelimabr@outlook.com"
+    }
+  ],
+  "postagens": [
+
+  ]
+}
