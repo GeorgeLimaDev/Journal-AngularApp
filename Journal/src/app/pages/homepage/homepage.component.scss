@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;800&family=Satisfy&display=swap');
+@font-face { font-family: "Satisfy"; src: url(https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;800&family=Satisfy&display=swap);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.landing-page {
+  height: 100vh;
+  background-color: #F5F0DC;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #E8DCBF;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+  font-weight: bold;
+}
+
+.right {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.right p {
+  margin-left: 20px;
+  margin-right: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.right p:hover {
+  font-size: 110%;
+}
+
+.logo {
+  text-align: center;
+  background-color: white;
+  padding: 0.5rem 0.9rem;
+  border-radius: 50%;
+  font-family: "Satisfy", cursive;
+  transform: rotateX(10deg);
+}
+
+.logo span {
+  transform: rotate(10deg);
+  display: inline-block;
+}
+
+.appName {
+  font-family: "Satisfy", cursive;
+  font-size: 2rem;
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logo,
+.appName {
+  vertical-align: middle;
+}
+
+.appName:hover {
+  font-size: 2.1rem;
+}
+
+main {
+  background-color: #E8DCBF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  width: 50%;
+  border-radius: 40px;
+  margin: 5% auto;
+}
+
+.sloggan {
+  font-style: italic;
+}
+
+
+h1 {
+  font-family: "Satisfy", cursive;
+  font-size: 7rem;
+  padding: 3rem;
+  transition: all 0.3s ease;
+}
+
+h1:hover {
+  font-size: 7.5rem;
+}
+
+h3 {
+  padding: 0.5rem;
+  font-weight: bold;
+}
+
+button {
+  background-color: transparent;
+  border: 1.5px solid #77D956;
+  padding: 1rem;
+  border-radius: 40px;
+  transition: all 0.3s ease;
+  width: 200px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #77D956;
+  font-weight: bold;
+  color: white;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #E8DCBF;
+  margin-top: 11.6rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+i {
+  margin: 0.5rem;
+  font-size: 2rem;
+}
+
+

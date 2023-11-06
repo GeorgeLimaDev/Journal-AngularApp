@@ -37,11 +37,4 @@ export class AppComponent {
       this.postagens.splice(index, 1);
     }
   }
-
-  constructor(private dialogService: DialogService) {
-  }
-
-  openDialog(): void {
-    this.dialogService.openDialog();
-  }
 }

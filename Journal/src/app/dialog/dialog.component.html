@@ -39,7 +39,7 @@
         <input matInput type="password" name="loginPassword" required>
       </mat-form-field>
       <br>
-      <button type="submit">Login</button>
+      <button [routerLink]="['/feed']" [mat-dialog-close]="true" type="submit">Login</button>
     </form>
   </div>
 </mat-dialog-content>
