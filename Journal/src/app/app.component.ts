@@ -12,7 +12,6 @@ import { DialogService } from './dialog/dialogService';
 })
 export class AppComponent {
   title = 'Journal';
-  usuarios: Usuario[] = USUARIOS;
   postagens: Postagem[] = POSTAGENS;
   postagemRegistering: Postagem = new Postagem((new Usuario('', '', '', '', '')), '', '', '', 0);
   canEdit = false;

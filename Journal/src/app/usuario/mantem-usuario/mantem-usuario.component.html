@@ -3,22 +3,22 @@
     <form>
       <mat-form-field>
         <mat-label>Nickname</mat-label>
-        <input matInput [(ngModel)]="userRegistering.nickname" name="nickname">
+        <input matInput [(ngModel)]="usuario.nickname" name="nickname">
       </mat-form-field>
       <br>
       <mat-form-field>
         <mat-label>Senha</mat-label>
-        <input matInput [(ngModel)]="userRegistering.senha" type="password" name="senha">
+        <input matInput [(ngModel)]="usuario.senha" type="password" name="senha">
       </mat-form-field>
       <br>
       <mat-form-field>
         <mat-label>Nome</mat-label>
-        <input matInput [(ngModel)]="userRegistering.nome" name="nome">
+        <input matInput [(ngModel)]="usuario.nome" name="nome">
       </mat-form-field>
       <br>
       <mat-form-field>
         <mat-label>Email</mat-label>
-        <input matInput [(ngModel)]="userRegistering.email" name="email">
+        <input matInput [(ngModel)]="usuario.email" name="email">
       </mat-form-field>
       <br>
       <button (click)="addUsuario()">Create account</button>
