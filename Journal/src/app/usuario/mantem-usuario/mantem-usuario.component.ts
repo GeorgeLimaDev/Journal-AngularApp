@@ -17,14 +17,15 @@ export class MantemUsuarioComponent implements OnInit {
 
   }
 
-  canEdit = false;
+  /*canEdit = false;*/
   addUsuario() {
     /*if (this.canEdit) {
       this.canEdit = false;
       this.userRegistering = new Usuario('', '', '', '', '');
     } else {*/
-      this.usuarioService.inserir(this.usuario);
-      console.log(this.usuario.toString());
+      this.usuarioService.inserir(this.usuario).subscribe(
+        usuario => console.log(usuario)
+      );
       window.alert(`Account ${this.usuario.nickname} was created. You can now log in to it.`);
       this.usuario = new Usuario('', '', '', '', '');
   }

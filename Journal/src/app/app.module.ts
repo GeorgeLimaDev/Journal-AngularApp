@@ -13,6 +13,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatIconModule} from '@angular/material/icon';
 import {FormsModule} from "@angular/forms";
 import {UsuarioModule} from "./usuario/usuario.module";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import {UsuarioModule} from "./usuario/usuario.module";
         MatFormFieldModule,
         MatIconModule,
         FormsModule,
-        UsuarioModule
+        UsuarioModule,
+        HttpClientModule
     ],
   providers: [],
   bootstrap: [AppComponent]

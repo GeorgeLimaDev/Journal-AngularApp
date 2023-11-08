@@ -1,12 +1,46 @@
 {
   "usuarios": [
     {
-      "id": 1,
-      "nickname": "georgelimadev",
-      "senha": "password123",
-      "link": "",
-      "nome": "George Lima",
-      "email": "georgelimabr@outlook.com"
+      "_nickname": "OliviaOliva",
+      "_senha": "12345",
+      "_link": "www.journal.app/user/OliviaOliva",
+      "_nome": "Olivia",
+      "_email": "olivia@mail.com",
+      "_postagens": [],
+      "_seguidores": [],
+      "_seguindo": [],
+      "_solicitacoes": [],
+      "_notificacoes": [],
+      "_logado": false,
+      "id": 2
+    },
+    {
+      "_nickname": "GeorgeLima",
+      "_senha": "12345",
+      "_link": "www.journal.app/user/GeorgeLima",
+      "_nome": "George",
+      "_email": "george@mail.com",
+      "_postagens": [],
+      "_seguidores": [],
+      "_seguindo": [],
+      "_solicitacoes": [],
+      "_notificacoes": [],
+      "_logado": false,
+      "id": 3
+    },
+    {
+      "_nickname": "TestUser",
+      "_senha": "12345",
+      "_link": "www.journal.app/user/TestUser",
+      "_nome": "Test",
+      "_email": "test@mail.com",
+      "_postagens": [],
+      "_seguidores": [],
+      "_seguindo": [],
+      "_solicitacoes": [],
+      "_notificacoes": [],
+      "_logado": false,
+      "id": 4
     }
   ],
   "postagens": [
