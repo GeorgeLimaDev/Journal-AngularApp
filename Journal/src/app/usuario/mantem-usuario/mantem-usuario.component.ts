@@ -26,7 +26,7 @@ export class MantemUsuarioComponent implements OnInit {
       this.usuarioService.inserir(this.usuario).subscribe(
         usuario => console.log(usuario)
       );
-      window.alert(`Account ${this.usuario.nickname} was created. You can now log in to it.`);
+      window.alert(`Account ${this.usuario.nickname} was created. You can now use it to log in.`);
       this.usuario = new Usuario('', '', '', '', '');
   }
 
