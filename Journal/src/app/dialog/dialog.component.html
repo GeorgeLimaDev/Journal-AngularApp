@@ -1,46 +1,7 @@
 <h2 mat-dialog-title>Hop in to Journal!</h2>
 <mat-dialog-content class="mat-typography">
   <div class="left">
-    <h3>Fill this form to create an account</h3>
-    <form>
-      <mat-form-field>
-        <mat-label>Nickname</mat-label>
-        <input matInput [(ngModel)]="userRegistering.nickname" name="nickname" required>
-      </mat-form-field>
-      <br>
-      <mat-form-field>
-        <mat-label>Senha</mat-label>
-        <input matInput [(ngModel)]="userRegistering.senha" type="password" name="senha" required>
-      </mat-form-field>
-      <br>
-      <mat-form-field>
-        <mat-label>Nome</mat-label>
-        <input matInput [(ngModel)]="userRegistering.nome" name="nome" required>
-      </mat-form-field>
-      <br>
-      <mat-form-field>
-        <mat-label>Email</mat-label>
-        <input matInput [(ngModel)]="userRegistering.email" name="email" required>
-      </mat-form-field>
-      <br>
-      <button (click)="addUsuario()">Create account</button>
-    </form>
-  </div>
-  <div class="right">
-    <h3>Already have an account? Log in to it.</h3>
-    <form>
-      <mat-form-field>
-        <mat-label>Nickname</mat-label>
-        <input matInput name="loginNickname" required>
-      </mat-form-field>
-      <br>
-      <mat-form-field>
-        <mat-label>Password</mat-label>
-        <input matInput type="password" name="loginPassword" required>
-      </mat-form-field>
-      <br>
-      <button [routerLink]="['/feed']" [mat-dialog-close]="true" type="submit">Login</button>
-    </form>
+    <app-mantem-usuario></app-mantem-usuario> <!--Utilizando o componente para cadastro de usuario dentro do mat-form-->
   </div>
 </mat-dialog-content>
 <mat-dialog-actions align="end">

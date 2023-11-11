@@ -24,6 +24,14 @@ import { MatCardModule } from "@angular/material/card";
 import { MatActionList, MatListModule } from "@angular/material/list";
 import { MainFeedComponent } from './shared/main-feed/main-feed.component';
 import {MatChipsModule} from "@angular/material/chips";
+import {MatSelectModule} from '@angular/material/select';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatIconModule} from '@angular/material/icon';
+import {FormsModule} from "@angular/forms";
+import {UsuarioModule} from "./usuario/usuario.module";
+import {HttpClientModule} from "@angular/common/http";
+import { HomepageComponent } from './pages/homepage/homepage.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +61,8 @@ import {MatChipsModule} from "@angular/material/chips";
         MatCardModule,
         MatListModule,
         MatChipsModule
+        UsuarioModule,
+        HttpClientModule
     ],
   exports: [
     ModalComponent,

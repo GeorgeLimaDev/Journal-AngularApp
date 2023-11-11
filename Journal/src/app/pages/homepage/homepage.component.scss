@@ -1,23 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;800&family=Satisfy&display=swap');
-@font-face { font-family: "Satisfy"; src: url(https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;800&family=Satisfy&display=swap);
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .landing-page {
-  height: 100vh;
-  background-color: #F5F0DC;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+  transition: background 1s ease-in-out; /* Add transition for background color */
 }
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #E8DCBF;
+  padding: 1rem;
+}
+
+.logo {
+  color: black;
+  text-decoration: none;
+  font-family: 'Satisfy', cursive;
+  font-size: 1.5rem;
+}
+
+svg {
+  scale: 1.5;
+  margin: 0 0.5rem;
 }
 
 .left {
@@ -30,121 +35,90 @@ header {
 
 .right {
   margin-top: 0.5rem;
+  margin-right: 1rem;
   display: flex;
+  gap: 1rem;
+  vertical-align: middle;
   justify-content: flex-end;
   align-items: center;
 }
 
-.right p {
-  margin-left: 20px;
-  margin-right: 2rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-weight: bold;
-}
-
-.right p:hover {
-  font-size: 110%;
-}
-
-.logo {
+main {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 70vh;
+  width: 90%;
+  margin: 5% auto;
   text-align: center;
   background-color: white;
-  padding: 0.5rem 0.9rem;
-  border-radius: 50%;
-  font-family: "Satisfy", cursive;
-  transform: rotateX(10deg);
-}
-
-.logo span {
-  transform: rotate(10deg);
-  display: inline-block;
-}
-
-.appName {
-  font-family: "Satisfy", cursive;
-  font-size: 2rem;
-  padding: 1rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.logo,
-.appName {
-  vertical-align: middle;
-}
-
-.appName:hover {
-  font-size: 2.1rem;
-}
-
-main {
-  background-color: #E8DCBF;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 50vh;
-  width: 50%;
   border-radius: 40px;
-  margin: 5% auto;
 }
 
-.sloggan {
+h1 {
+  font-family: 'Satisfy', cursive;
+  font-size: 13rem;
+  padding: 5rem;
+}
+
+h4 {
+  margin-bottom: 3rem;
+}
+
+span {
   font-style: italic;
 }
 
-
-h1 {
-  font-family: "Satisfy", cursive;
-  font-size: 7rem;
-  padding: 3rem;
-  transition: all 0.3s ease;
+form {
+  display: flex;
+  margin: 1rem;
+  gap: 1rem;
+  justify-content: center;
 }
 
-h1:hover {
-  font-size: 7.5rem;
-}
-
-h3 {
-  padding: 0.5rem;
-  font-weight: bold;
+input {
+  border-radius: 40px;
+  padding: 1rem;
 }
 
 button {
+  position: relative;
   background-color: transparent;
-  border: 1.5px solid #77D956;
+  border: 1.5px solid #d3ff60;
   padding: 1rem;
   border-radius: 40px;
-  transition: all 0.3s ease;
   width: 200px;
   font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
+  overflow: hidden;
+  z-index: 1; /* Ensure the button is above the pseudo-element */
 }
 
-button:hover {
-  background-color: #77D956;
-  font-weight: bold;
-  color: white;
+button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: #d3ff60;
+  transition: left 0.3s ease-in-out;
+  z-index: -1; /* Ensure the pseudo-element is behind the button */
 }
 
-footer {
-  text-align: center;
-  padding: 1rem;
-  background-color: #E8DCBF;
-  margin-top: 11.6rem;
+button:hover::before {
+  left: 0;
+  color: black;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-  display: inline-block;
-}
-
-i {
-  margin: 0.5rem;
-  font-size: 2rem;
+.cta {
+  background-color: #d3ff60;
 }
 
 
+img {
+  max-width: 100%;
+  max-height: 80vh;
+  transition: opacity 1s ease-in-out; /* Keep the transition for image opacity */
+}
