@@ -13,8 +13,10 @@ export class PostagemService {
     this.URL_postagens = 'http://localhost:3000/postagens';
   }
 
-  inserir(postagem: Postagem): Observable<Postagem> {
-    return this.httpClient.post<Postagem>(this.URL_postagens, postagem);
+  inserir(postagem: Postagem): void  {
+    this.httpClient.post<Postagem>(this.URL_postagens, postagem).subscribe(postagemCadastrada => {
+      console.log(postagemCadastrada);
+    });
   }
 
   listar(): Observable<Postagem[]> {

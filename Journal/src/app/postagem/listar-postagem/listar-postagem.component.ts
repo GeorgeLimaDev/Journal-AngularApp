@@ -12,11 +12,13 @@ export class ListarPostagemComponent implements OnInit {
 
   constructor(private postagemService: PostagemService) {
     this.postagens = [];
+    this.postagens = this.postagens.slice().reverse();
   }
 
   ngOnInit() {
     this.postagemService.listar().subscribe(
-      postagens => this.postagens = postagens
+      postagens => this.postagens = postagens.reverse()
     );
+
   }
 }

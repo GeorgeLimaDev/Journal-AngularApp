@@ -1,7 +1,7 @@
 <mat-card class="rounded-card">
   <mat-card-content>
     <mat-form-field class="textarea">
-      <textarea matInput placeholder="Write your thoughts in here!"></textarea>
+      <textarea [(ngModel)]="postagem.conteudo" matInput placeholder="Write your thoughts in here!"></textarea>
     </mat-form-field>
     <mat-chip-listbox aria-label="publico/restrito/só para mim">
       <mat-chip-option>público</mat-chip-option>

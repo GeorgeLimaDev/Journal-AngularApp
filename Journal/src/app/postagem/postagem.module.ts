@@ -7,7 +7,7 @@ import {MatCardModule} from "@angular/material/card";
 import {MatChipsModule} from "@angular/material/chips";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
-import {ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 
 
@@ -16,9 +16,10 @@ import {ReactiveFormsModule} from "@angular/forms";
     MantemPostagemComponent,
     ListarPostagemComponent
   ],
-  exports: [
-    MantemPostagemComponent
-  ],
+    exports: [
+        MantemPostagemComponent,
+        ListarPostagemComponent
+    ],
   imports: [
     CommonModule,
     MatButtonModule,
@@ -26,7 +27,8 @@ import {ReactiveFormsModule} from "@angular/forms";
     MatChipsModule,
     MatFormFieldModule,
     MatInputModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class PostagemModule { }

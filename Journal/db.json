@@ -41,9 +41,110 @@
       "_notificacoes": [],
       "_logado": false,
       "id": 4
+    },
+    {
+      "id": 5,
+      "nickname": "DefaultAccount",
+      "senha": "default",
+      "link": "www.journal.app/user/",
+      "nome": "Default Account",
+      "email": "default@account.com",
+      "postagens": [],
+      "seguidores": [],
+      "seguindo": [],
+      "solicitacoes": [],
+      "notificacoes": [],
+      "logado": false
     }
   ],
   "postagens": [
-
+    {
+      "id": 1,
+      "autor": {
+        "id": "",
+        "nickname": "DefaultUser",
+        "senha": "12345",
+        "link": "www.journal.app/user/DefaultUser",
+        "nome": "Default User",
+        "email": "default@user.com",
+        "postagens": [],
+        "seguidores": [],
+        "seguindo": [],
+        "solicitacoes": [],
+        "notificacoes": [],
+        "logado": false
+      },
+      "link": "www.journal.app/DefaultUser/1",
+      "conteudo": "Post test #1",
+      "privacidade": "",
+      "timestamp": 0,
+      "comentarios": []
+    },
+    {
+      "id": 2,
+      "autor": {
+        "id": "",
+        "nickname": "danielmendesfeels",
+        "senha": "12345",
+        "link": "www.journal.app/user/danielmendesfeels",
+        "nome": "Daniel Mendes",
+        "email": "daniel.mendes@user.com",
+        "postagens": [],
+        "seguidores": [],
+        "seguindo": [],
+        "solicitacoes": [],
+        "notificacoes": [],
+        "logado": false
+      },
+      "link": "www.journal.app/danielmendesfeels/1",
+      "conteudo": "Today, I had the most wonderful day at the park. The sun was shining, the birds were singing, and the whole world seemed to be full of life. I took a long walk through the green meadows, feeling the soft grass beneath my feet and the gentle breeze on my face.\n                I found a quiet spot under a tree and sat down to read my favorite book. The words on the pages seemed to come to life as I lost myself in the story. It was a perfect escape from the hustle and bustle of everyday life.\n                As I looked around, I couldn't help but notice the children playing on the swings and the laughter that filled the air. It reminded me of the simple joys of life and the importance of taking a moment to appreciate them.\n                I ended the day with a picnic, enjoying sandwiches and fresh fruit. The sun began to set, casting a warm, golden glow over everything. It was a day filled with peace, happiness, and a deep sense of gratitude.\n                I'm grateful for days like these when I can slow down and connect with the beauty of the world around me. It's a reminder that life is full of moments worth savoring, and I'm excited to see what other adventures await in my journal.\n                #Nature #PeacefulDay #Gratitude",
+      "privacidade": "",
+      "timestamp": 0,
+      "comentarios": []
+    },
+    {
+      "id": 3,
+      "autor": {
+        "id": "",
+        "nickname": "danielmendesfeels",
+        "senha": "12345",
+        "link": "www.journal.app/user/danielmendesfeels",
+        "nome": "Daniel Mendes",
+        "email": "daniel.mendes@user.com",
+        "postagens": [],
+        "seguidores": [],
+        "seguindo": [],
+        "solicitacoes": [],
+        "notificacoes": [],
+        "logado": false
+      },
+      "link": "www.journal.app/danielmendesfeels/1",
+      "conteudo": "\"Spent the day exploring a quaint little town. The cobbled streets, charming cafes, and friendly faces made it a delightful experience. I stumbled upon a hidden bookstore and lost track of time among the shelves. The smell of old books and the sound of the town square clock chiming added to the magical atmosphere. Ended the day with a cup of coffee and a sketchbook, capturing the essence of this charming place. Grateful for spontaneous adventures and the simple joys they bring. #Exploration #HiddenGems #CharmingTown\"",
+      "privacidade": "",
+      "timestamp": 0,
+      "comentarios": []
+    },
+    {
+      "id": 4,
+      "autor": {
+        "id": "",
+        "nickname": "danielmendesfeels",
+        "senha": "12345",
+        "link": "www.journal.app/user/danielmendesfeels",
+        "nome": "Daniel Mendes",
+        "email": "daniel.mendes@user.com",
+        "postagens": [],
+        "seguidores": [],
+        "seguindo": [],
+        "solicitacoes": [],
+        "notificacoes": [],
+        "logado": false
+      },
+      "link": "www.journal.app/danielmendesfeels/1",
+      "conteudo": "\"Today's adventure led me to the mountains. The air was crisp, and the scent of pine surrounded me as I hiked to the summit. The view from the top took my breath away – a panoramic display of nature's grandeur. I sat on a rock, feeling the connection with the earth and the vastness of the sky above. Shared a quiet moment with a friendly mountain squirrel, appreciating the beauty of wildlife. As the sun dipped below the peaks, I set up a campfire and enjoyed a cozy evening under the stars. Grateful for the majesty of the mountains and the serenity they bring. #MountainEscape #NatureAdventure #Gratitude\"",
+      "privacidade": "",
+      "timestamp": 0,
+      "comentarios": []
+    }
   ]
 }

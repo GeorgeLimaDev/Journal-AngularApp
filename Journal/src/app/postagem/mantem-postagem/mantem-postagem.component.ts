@@ -15,15 +15,16 @@ export class MantemPostagemComponent {
   postagens: Postagem[] = [];
 
   constructor(private postagemService: PostagemService) {
-    this.autor = new Usuario("","","","","", ""); //Aqui deveria ler o usuário logado para atribuir como autor.
+    this.autor = new Usuario("","danielmendesfeels","12345","","Daniel Mendes", "daniel.mendes@user.com"); //Aqui deveria ler o usuário logado para atribuir como autor.
     this.postagem = new Postagem("",this.autor, "","","",0);
 
   }
 
   inserir() {
-    let postAInserir: Postagem = new Postagem("", this.autor, "", "","", Date.now());
+    let postAInserir: Postagem = this.postagem;
     this.postagemService.inserir(postAInserir);
     console.log(`Post ${this.postagem.id} was created.`)
+    window.alert(`Thanks, ${this.autor.nome}. Your post was created. Please refresh to view it.`)
   }
 
 }
