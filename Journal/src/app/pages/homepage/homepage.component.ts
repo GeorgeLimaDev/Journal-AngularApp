@@ -1,6 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { interval, Subscription } from 'rxjs';
+import {interval, map, Observable, Subscription} from 'rxjs';
 import { DialogService } from '../../dialog/dialogService';
+import {UsuarioService} from "../../shared/services/usuario.service";
+import {Usuario} from "../../shared/model/usuario";
 
 @Component({
   selector: 'app-homepage',
@@ -8,6 +10,8 @@ import { DialogService } from '../../dialog/dialogService';
   styleUrls: ['./homepage.component.scss']
 })
 export class HomepageComponent implements OnInit, OnDestroy {
+  usuario: Usuario;
+  usuarios: Usuario[];
   private colorChangeInterval: Subscription = new Subscription();
   private imageChangeInterval: Subscription = new Subscription();
   private colors: string[] = ['#fdd32c', '#9dd7ee', '#e06fa9'];
@@ -18,8 +22,24 @@ export class HomepageComponent implements OnInit, OnDestroy {
   currentImageUrl: string = '';
   imageOpacity: number = 1;
 
-  constructor(private dialogService: DialogService) {
+  constructor(private dialogService: DialogService, private usuarioService: UsuarioService) {
+    this.usuario = new Usuario("","","","","","");
+    this.usuarios = [];
   }
+
+  //Tentativa de validar os dados de login. Melhor deixar para depois.
+  validateLogin(usuario: Usuario): Observable<boolean> {
+    return this.usuarioService.listar().pipe(
+      map(usuarios => {
+        /*this.usuarios = usuarios;*/
+        const userFound = usuarios.find(
+          u => u.nickname === usuario.nickname && u.senha === usuario.senha
+        );
+        return !!userFound; // Return true if user is found, false otherwise
+      })
+    );
+  }
+
 
   ngOnInit(): void {
     this.startColorChange(); // Start color change interval

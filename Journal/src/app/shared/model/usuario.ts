@@ -4,26 +4,27 @@ import {Postagem} from "./postagem";
 
 export class Usuario {
   constructor(
-    private _nickname: string, //Não pode conter espaços.
-    private _senha: string,
-    private _link: string = '',
-    private _nome: string,
-    private _email: string,
-    private _postagens: Postagem[] = [],
-    private _seguidores: Usuario[] = [],
-    private _seguindo: Usuario[] = [],
-    private _solicitacoes: Solicitacao[] = [],
-    private _notificacoes: Notificacao[] = [],
-    private _logado: boolean = false) {
-    this._link = `www.journal.app/user/${_nickname}`;
+    public id: string,
+    public nickname: string, //Não pode conter espaços.
+    public senha: string,
+    public link: string = '',
+    public nome: string,
+    public email: string,
+    public postagens: Postagem[] = [],
+    public seguidores: Usuario[] = [],
+    public seguindo: Usuario[] = [],
+    public solicitacoes: Solicitacao[] = [],
+    public notificacoes: Notificacao[] = [],
+    public logado: boolean = false) {
+    this.link = `www.journal.app/user/${nickname}`;
   }
 
-  get nickname(): string {
-    return this._nickname;
+  /*get nickname(): string {
+    return this.nickname;
   }
   set nickname(novoNickname: string) {
-    this._nickname = novoNickname;
-    this._link = this.updateLink(novoNickname); //Caso o usuário defina um novo nickname seu link é atualizado junto.
+    this.nickname = novoNickname;
+    this.link = this.updateLink(novoNickname); //Caso o usuário defina um novo nickname seu link é atualizado junto.
   }
 
   get senha(): string {
@@ -63,102 +64,104 @@ export class Usuario {
     return this._postagens;
   }
 
+
+  set postagens(value: Postagem[]) {
+    this._postagens = value;
+  } //Acho que não vai ser necessário.*/
+
   countPostagens(): number {
     return this.postagens.length;
   }
-  set postagens(value: Postagem[]) {
-    this._postagens = value;
-  } //Acho que não vai ser necessário.
 
   addPostagem(novaPostagem: Postagem) {
-    this._postagens.push(novaPostagem);
+    this.postagens.push(novaPostagem);
   }
 
   delPostagem(postADeletar: Postagem) {
-    const index = this._postagens.findIndex((postagem: Postagem) => postagem === postADeletar);
+    const index = this.postagens.findIndex((postagem: Postagem) => postagem === postADeletar);
     if (index !== -1) {
-      this._postagens.splice(index, 1);
+      this.postagens.splice(index, 1);
     }
   }
 
-  get seguidores(): Usuario[] {
-    return this._seguidores;
+  /*get seguidores(): Usuario[] {
+    return this.seguidores;
   }
   set seguidores(value: Usuario[]) {
-    this._seguidores = value;
-  } //Acho que não vai ser necessário.
+    this.seguidores = value;
+  } //Acho que não vai ser necessário.*/
 
   addSeguidor (novoSeguidor: Usuario) {
-    this._seguidores.push(novoSeguidor);
+    this.seguidores.push(novoSeguidor);
   }
 
   delSeguidor (seguidorADeletar: Usuario) {
-    const index = this._seguidores.findIndex((usuario) => usuario === seguidorADeletar);
+    const index = this.seguidores.findIndex((usuario) => usuario === seguidorADeletar);
     if (index !== -1) {
-      this._seguidores.splice(index, 1);
+      this.seguidores.splice(index, 1);
     }
   }
 
-  get seguindo(): Usuario[] {
-    return this._seguindo;
+  /*get seguindo(): Usuario[] {
+    return this.seguindo;
   }
   set seguindo(value: Usuario[]) {
-    this._seguindo = value;
-  } //Acho que não vai ser necessário.
+    this.seguindo = value;
+  } //Acho que não vai ser necessário.*/
 
   seguir (novoUsuario: Usuario) {
-    this._seguindo.push(novoUsuario);
+    this.seguindo.push(novoUsuario);
   }
 
   deixarDeSeguir (seguidoADeletar: Usuario) {
-    const index = this._seguindo.findIndex((usuario) => usuario === seguidoADeletar);
+    const index = this.seguindo.findIndex((usuario) => usuario === seguidoADeletar);
     if (index !== -1) {
-      this._seguindo.splice(index, 1);
+      this.seguindo.splice(index, 1);
     }
   }
 
-  get solicitacoes(): Solicitacao[] {
-    return this._solicitacoes;
+  /*get solicitacoes(): Solicitacao[] {
+    return this.solicitacoes;
   }
   set solicitacoes(value: Solicitacao[]) {
-    this._solicitacoes = value;
-  } //Acho que não vai ser necessário.
+    this.solicitacoes = value;
+  } //Acho que não vai ser necessário.*/
 
   addSolicitacao(novaSolicitacao: Solicitacao) {
-    this._solicitacoes.push(novaSolicitacao);
+    this.solicitacoes.push(novaSolicitacao);
   }
 
   delSolicitacao(SolADeletar: Solicitacao) {
-    const index = this._solicitacoes.findIndex((solicitacao) => solicitacao === SolADeletar);
+    const index = this.solicitacoes.findIndex((solicitacao) => solicitacao === SolADeletar);
     if (index !== -1) {
-      this._solicitacoes.splice(index, 1);
+      this.solicitacoes.splice(index, 1);
     }
   }
 
-  get notificacoes(): Notificacao[] {
-    return this._notificacoes;
+  /*get notificacoes(): Notificacao[] {
+    return this.notificacoes;
   }
   set notificacoes(value: Notificacao[]) {
-    this._notificacoes = value;
-  } //Acho que não vai ser necessário.
+    this.notificacoes = value;
+  } //Acho que não vai ser necessário.*/
 
   addNotificacao(novaNotificacao: Notificacao) {
-    this._notificacoes.push(novaNotificacao);
+    this.notificacoes.push(novaNotificacao);
   }
 
   delNotificacao(notADeletar: Notificacao) {
-    const index = this._notificacoes.findIndex((notificacao) => notificacao === notADeletar);
+    const index = this.notificacoes.findIndex((notificacao) => notificacao === notADeletar);
     if (index !== -1) {
-      this._notificacoes.splice(index, 1);
+      this.notificacoes.splice(index, 1);
     }
   }
 
-  get logado(): boolean {
-    return this._logado;
+  /*get logado(): boolean {
+    return this.logado;
   }
   set logado(value: boolean) {
-    this._logado = value;
-  } //Utilizar ao fazer o login (recebe true), ou logout (recebe false).
+    this.logado = value;
+  } //Utilizar ao fazer o login (recebe true), ou logout (recebe false).*/
 
   toString(): string {
     return `

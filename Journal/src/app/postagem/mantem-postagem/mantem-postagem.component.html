@@ -1,1 +1,14 @@
-<p>mantem-postagem works!</p>
+<mat-card class="rounded-card">
+  <mat-card-content>
+    <mat-form-field class="textarea">
+      <textarea matInput placeholder="Write your thoughts in here!"></textarea>
+    </mat-form-field>
+    <mat-chip-listbox aria-label="publico/restrito/só para mim">
+      <mat-chip-option>público</mat-chip-option>
+      <mat-chip-option>restrito</mat-chip-option>
+      <mat-chip-option color="primary" selected>só para mim</mat-chip-option>
+      <button (click)="inserir()" class="btn" mat-raised-button color="primary">Publish</button>
+    </mat-chip-listbox>
+
+  </mat-card-content>
+</mat-card>

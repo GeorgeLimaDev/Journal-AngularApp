@@ -10,7 +10,7 @@ import {UsuarioService} from "../../shared/services/usuario.service"
 export class MantemUsuarioComponent implements OnInit {
   usuario: Usuario;
   constructor(private usuarioService: UsuarioService) {
-    this.usuario = new Usuario("","","","","");
+    this.usuario = new Usuario("","","","","", "");
   }
 
   ngOnInit() {
@@ -27,7 +27,7 @@ export class MantemUsuarioComponent implements OnInit {
         usuario => console.log(usuario)
       );
       window.alert(`Account ${this.usuario.nickname} was created. You can now use it to log in.`);
-      this.usuario = new Usuario('', '', '', '', '');
+      this.usuario = new Usuario('', '', '', '', '',"");
   }
 
   /*editUsuario(usuarioToEdit: Usuario) {

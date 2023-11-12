@@ -1,21 +1,8 @@
-<mat-card class="rounded-card">
-    <mat-card-content>
-        <mat-form-field class="textarea">
-            <textarea  matInput placeholder="Write your thoughts in here!"></textarea>
-        </mat-form-field>
-        <mat-chip-listbox aria-label="publico/restrito/só para mim">
-            <mat-chip-option>público</mat-chip-option>
-            <mat-chip-option>restrito</mat-chip-option>
-            <mat-chip-option color="primary" selected>só para mim</mat-chip-option>
-            <button class="btn" mat-raised-button color="primary">Publish</button>
-        </mat-chip-listbox>
+<app-mantem-postagem></app-mantem-postagem>
+<!--Os posts devem ser listados dinamicamente a partir do banco-->
+<mat-card class="posts" *ngFor="let postage of postagens">
 
-    </mat-card-content>
-</mat-card>
-
-<mat-card class="posts">
-
-    <mat-card-content class="post">
+    <!--<mat-card-content class="post">
         <mat-card-header>
             <div mat-card-avatar class="header-image"></div>
             <mat-card-title>Daniel Mendes</mat-card-title>
@@ -100,5 +87,5 @@
         <mat-card-actions>
             <button mat-button>leave a comment</button>
         </mat-card-actions>
-    </mat-card-content>
+    </mat-card-content>-->
 </mat-card>
