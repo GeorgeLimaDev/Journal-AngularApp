@@ -8,13 +8,15 @@ import {MatChipsModule} from "@angular/material/chips";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {CreateListPostsComponent} from '../create-list-posts/create-list-posts.component'
 
 
 
 @NgModule({
   declarations: [
     MantemPostagemComponent,
-    ListarPostagemComponent
+    ListarPostagemComponent,
+    CreateListPostsComponent
   ],
     exports: [
         MantemPostagemComponent,

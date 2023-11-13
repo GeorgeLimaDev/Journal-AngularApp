@@ -5,7 +5,7 @@ import {Postagem} from "./postagem";
 export class Usuario {
   constructor(
     public id: string,
-    public nickname: string, //Não pode conter espaços.
+    public nickname: string, //Implementar regra para não poder conter espaços.
     public senha: string,
     public link: string = '',
     public nome: string,
@@ -18,56 +18,6 @@ export class Usuario {
     public logado: boolean = false) {
     this.link = `www.journal.app/user/${nickname}`;
   }
-
-  /*get nickname(): string {
-    return this.nickname;
-  }
-  set nickname(novoNickname: string) {
-    this.nickname = novoNickname;
-    this.link = this.updateLink(novoNickname); //Caso o usuário defina um novo nickname seu link é atualizado junto.
-  }
-
-  get senha(): string {
-    return this._senha;
-  }
-  set senha(novaSenha: string) {
-    this._senha = novaSenha;
-  }
-
-  get link(): string {
-    return this._link;
-  }
-  set link(newLink: string) {
-    this._link = newLink;
-    this._nickname = this.updateLink(newLink);
-  }
-
-  updateLink(novoNickname: string) {
-    return `www.journal.app/user/${novoNickname}`;
-  }
-
-  get nome(): string {
-    return this._nome;
-  }
-  set nome(novoNome: string) {
-    this._nome = novoNome;
-  }
-
-  get email(): string {
-    return this._email;
-  }
-  set email(novoEmail: string) {
-    this._email = novoEmail;
-  }
-
-  get postagens(): Postagem[] {
-    return this._postagens;
-  }
-
-
-  set postagens(value: Postagem[]) {
-    this._postagens = value;
-  } //Acho que não vai ser necessário.*/
 
   countPostagens(): number {
     return this.postagens.length;
@@ -84,13 +34,6 @@ export class Usuario {
     }
   }
 
-  /*get seguidores(): Usuario[] {
-    return this.seguidores;
-  }
-  set seguidores(value: Usuario[]) {
-    this.seguidores = value;
-  } //Acho que não vai ser necessário.*/
-
   addSeguidor (novoSeguidor: Usuario) {
     this.seguidores.push(novoSeguidor);
   }
@@ -101,13 +44,6 @@ export class Usuario {
       this.seguidores.splice(index, 1);
     }
   }
-
-  /*get seguindo(): Usuario[] {
-    return this.seguindo;
-  }
-  set seguindo(value: Usuario[]) {
-    this.seguindo = value;
-  } //Acho que não vai ser necessário.*/
 
   seguir (novoUsuario: Usuario) {
     this.seguindo.push(novoUsuario);
@@ -120,13 +56,6 @@ export class Usuario {
     }
   }
 
-  /*get solicitacoes(): Solicitacao[] {
-    return this.solicitacoes;
-  }
-  set solicitacoes(value: Solicitacao[]) {
-    this.solicitacoes = value;
-  } //Acho que não vai ser necessário.*/
-
   addSolicitacao(novaSolicitacao: Solicitacao) {
     this.solicitacoes.push(novaSolicitacao);
   }
@@ -138,13 +67,6 @@ export class Usuario {
     }
   }
 
-  /*get notificacoes(): Notificacao[] {
-    return this.notificacoes;
-  }
-  set notificacoes(value: Notificacao[]) {
-    this.notificacoes = value;
-  } //Acho que não vai ser necessário.*/
-
   addNotificacao(novaNotificacao: Notificacao) {
     this.notificacoes.push(novaNotificacao);
   }
@@ -155,13 +77,6 @@ export class Usuario {
       this.notificacoes.splice(index, 1);
     }
   }
-
-  /*get logado(): boolean {
-    return this.logado;
-  }
-  set logado(value: boolean) {
-    this.logado = value;
-  } //Utilizar ao fazer o login (recebe true), ou logout (recebe false).*/
 
   toString(): string {
     return `

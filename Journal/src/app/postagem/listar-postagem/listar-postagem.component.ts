@@ -8,17 +8,15 @@ import {PostagemService} from "../../shared/services/postagem.service";
   styleUrls: ['./listar-postagem.component.scss']
 })
 export class ListarPostagemComponent implements OnInit {
-  postagens: Postagem[];
+  postagens: Postagem[] = [];
 
   constructor(private postagemService: PostagemService) {
-    this.postagens = [];
-    this.postagens = this.postagens.slice().reverse();
   }
 
   ngOnInit() {
-    this.postagemService.listar().subscribe(
-      postagens => this.postagens = postagens.reverse()
+    this.postagemService.listar().subscribe(postagens => {
+      this.postagens = postagens.reverse() //Listando em reverso para que as mais recentes apareçam no início.
+    }
     );
-
   }
 }

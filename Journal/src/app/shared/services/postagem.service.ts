@@ -1,22 +1,19 @@
 import { Injectable } from '@angular/core';
-import {Postagem} from "../model/postagem";
 import {HttpClient} from "@angular/common/http";
+import {Postagem} from "../model/postagem";
 import {Observable} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
 })
 export class PostagemService {
-  URL_postagens: string;
+  URL_postagens = 'http://localhost:3000/postagens';
 
   constructor(private httpClient: HttpClient) {
-    this.URL_postagens = 'http://localhost:3000/postagens';
   }
 
-  inserir(postagem: Postagem): void  {
-    this.httpClient.post<Postagem>(this.URL_postagens, postagem).subscribe(postagemCadastrada => {
-      console.log(postagemCadastrada);
-    });
+  inserir(postagem: Postagem): Observable<Postagem>  {
+    return this.httpClient.post<Postagem>(this.URL_postagens, postagem)
   }
 
   listar(): Observable<Postagem[]> {

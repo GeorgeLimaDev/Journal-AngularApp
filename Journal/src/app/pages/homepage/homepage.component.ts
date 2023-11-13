@@ -1,8 +1,9 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import {interval, map, Observable, Subscription} from 'rxjs';
+import { interval, Observable, Subscription } from 'rxjs';
+import { map } from 'rxjs/operators';
 import { DialogService } from '../../dialog/dialogService';
+import { Usuario } from '../../shared/model/usuario';
 import {UsuarioService} from "../../shared/services/usuario.service";
-import {Usuario} from "../../shared/model/usuario";
 
 @Component({
   selector: 'app-homepage',
@@ -10,8 +11,10 @@ import {Usuario} from "../../shared/model/usuario";
   styleUrls: ['./homepage.component.scss']
 })
 export class HomepageComponent implements OnInit, OnDestroy {
-  usuario: Usuario;
+  nicknameDigitado: string;
+  senhaDigitada: string;
   usuarios: Usuario[];
+
   private colorChangeInterval: Subscription = new Subscription();
   private imageChangeInterval: Subscription = new Subscription();
   private colors: string[] = ['#fdd32c', '#9dd7ee', '#e06fa9'];
@@ -23,30 +26,28 @@ export class HomepageComponent implements OnInit, OnDestroy {
   imageOpacity: number = 1;
 
   constructor(private dialogService: DialogService, private usuarioService: UsuarioService) {
-    this.usuario = new Usuario("","","","","","");
     this.usuarios = [];
+    this.nicknameDigitado = "";
+    this.senhaDigitada = "";
   }
 
   //Tentativa de validar os dados de login. Melhor deixar para depois.
   validateLogin(usuario: Usuario): Observable<boolean> {
     return this.usuarioService.listar().pipe(
-      map(usuarios => {
-        /*this.usuarios = usuarios;*/
+      map((usuarios: Usuario[]) => {
         const userFound = usuarios.find(
-          u => u.nickname === usuario.nickname && u.senha === usuario.senha
+          u => u.nickname === this.nicknameDigitado && u.senha === this.senhaDigitada
         );
-        return !!userFound; // Return true if user is found, false otherwise
+        return !!userFound;
       })
     );
   }
 
-
   ngOnInit(): void {
-    this.startColorChange(); // Start color change interval
-    this.startImageChange(); // Start image change interval
-    this.updateBackgroundColorAndImage(); // Set the initial background color and image
+    this.startColorChange();
+    this.startImageChange();
+    this.updateBackgroundColorAndImage();
   }
-
 
   ngOnDestroy(): void {
     this.colorChangeInterval.unsubscribe();
@@ -83,7 +84,6 @@ export class HomepageComponent implements OnInit, OnDestroy {
   }
 
   private fadeToWhite(color: string, percentage: number): string {
-    const white = '#FFFFFF';
     // @ts-ignore
     const hexToRgb = (hex: string): number[] => hex.match(/\w\w/g).map(x => parseInt(x, 16));
     const rgbToHex = (r: number, g: number, b: number): string => ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);

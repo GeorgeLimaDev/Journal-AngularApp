@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -27,6 +26,7 @@ import {UsuarioModule} from "./usuario/usuario.module";
 import {HttpClientModule} from "@angular/common/http";
 import { HomepageComponent } from './pages/homepage/homepage.component';
 import {PostagemModule} from "./postagem/postagem.module";
+import { CreateListPostsComponent } from './create-list-posts/create-list-posts.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +38,8 @@ import {PostagemModule} from "./postagem/postagem.module";
     PerfilFeedComponent,
     FeedComponent,
     HomepageComponent,
-    MainFeedComponent
+    MainFeedComponent,
+    CreateListPostsComponent
   ],
   imports: [
     BrowserModule,
@@ -58,7 +59,7 @@ import {PostagemModule} from "./postagem/postagem.module";
     MatChipsModule,
     UsuarioModule,
     HttpClientModule,
-    PostagemModule
+    PostagemModule,
   ],
   exports: [
     ModalComponent,

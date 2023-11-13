@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import {Usuario} from "../../shared/model/usuario";
 import {Postagem} from "../../shared/model/postagem";
 import {PostagemService} from "../../shared/services/postagem.service";
@@ -21,10 +21,14 @@ export class MantemPostagemComponent {
   }
 
   inserir() {
-    let postAInserir: Postagem = this.postagem;
-    this.postagemService.inserir(postAInserir);
-    console.log(`Post ${this.postagem.id} was created.`)
-    window.alert(`Thanks, ${this.autor.nome}. Your post was created. Please refresh to view it.`)
+    /*let postAInserir: Postagem = this.postagem;*/
+    this.postagemService.inserir(this.postagem).subscribe(
+      postagemCriada => {
+        console.log(`Post ${this.postagem.id} was created.`)
+        window.alert(`Thanks, ${this.autor.nome}. Your post was created. Please refresh to view it.`)
+      }
+    );
+
   }
 
 }

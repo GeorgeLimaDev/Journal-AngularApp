@@ -16,7 +16,7 @@ export class ListarUsuarioComponent implements OnInit {
 
   ngOnInit() {
     this.usuarioService.listar().subscribe(
-      usuarios => this.usuarios = usuarios
+      usuarios => this.usuarios = usuarios.reverse()
     );
   }
 }

@@ -16,7 +16,7 @@ export class MainFeedComponent implements OnInit{
   ngOnInit() {
     this.postagemService.listar().subscribe(postagensRetornadas =>
       {
-        this.postagens = postagensRetornadas;
+        this.postagens = postagensRetornadas.reverse();
       }
     );
   }
