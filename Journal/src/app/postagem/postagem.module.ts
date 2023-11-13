@@ -8,7 +8,8 @@ import {MatChipsModule} from "@angular/material/chips";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import {CreateListPostsComponent} from '../create-list-posts/create-list-posts.component'
+import {MatButtonToggleModule} from "@angular/material/button-toggle";
+
 
 
 
@@ -16,21 +17,21 @@ import {CreateListPostsComponent} from '../create-list-posts/create-list-posts.c
   declarations: [
     MantemPostagemComponent,
     ListarPostagemComponent,
-    CreateListPostsComponent
   ],
     exports: [
         MantemPostagemComponent,
         ListarPostagemComponent
     ],
-  imports: [
-    CommonModule,
-    MatButtonModule,
-    MatCardModule,
-    MatChipsModule,
-    MatFormFieldModule,
-    MatInputModule,
-    ReactiveFormsModule,
-    FormsModule
-  ]
+    imports: [
+        CommonModule,
+        MatButtonModule,
+        MatCardModule,
+        MatChipsModule,
+        MatFormFieldModule,
+        MatInputModule,
+        ReactiveFormsModule,
+        FormsModule,
+        MatButtonToggleModule
+    ]
 })
 export class PostagemModule { }

@@ -1,5 +1,7 @@
 .menu {
-  background-color: #E8DCBF;
+
+  top: 20px;
+  background-color: #e8dcbf;
   width: 100%;
   height: 100%;
   border-radius: 20px;
@@ -23,11 +25,12 @@
 }
 
 footer {
+  border-radius: 20px;
   font-size: small;
   text-align: center;
   padding: 0.5rem;
   background-color: #E8DCBF;
-  margin-top: 15rem;
+  margin-top: 30rem;
 }
 
 a {

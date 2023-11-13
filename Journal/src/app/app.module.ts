@@ -16,17 +16,23 @@ import { RouterModule } from "@angular/router";
 import { MatCardModule } from "@angular/material/card";
 import { MatActionList, MatListModule } from "@angular/material/list";
 import { MainFeedComponent } from './shared/main-feed/main-feed.component';
-import {MatChipsModule} from "@angular/material/chips";
-import {MatSelectModule} from '@angular/material/select';
-import {MatInputModule} from '@angular/material/input';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatIconModule} from '@angular/material/icon';
-import {FormsModule} from "@angular/forms";
-import {UsuarioModule} from "./usuario/usuario.module";
-import {HttpClientModule} from "@angular/common/http";
+import { MatChipsModule } from "@angular/material/chips";
+import { MatSelectModule } from '@angular/material/select';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+import { FormsModule } from "@angular/forms";
+import { UsuarioModule } from "./usuario/usuario.module";
+import { HttpClientModule } from "@angular/common/http";
 import { HomepageComponent } from './pages/homepage/homepage.component';
-import {PostagemModule} from "./postagem/postagem.module";
-import { CreateListPostsComponent } from './create-list-posts/create-list-posts.component';
+import { PostagemModule } from "./postagem/postagem.module";
+import { CreateListPostsComponent } from "./create-list-posts/create-list-posts.component";
+import { SettingsComponent } from './shared/settings/settings.component';
+import { ProfileComponent } from "./pages/profile/profile.component";
+import { SuggestionsProfileComponent } from './shared/suggestions-profile/suggestions-profile.component';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+
+
 
 @NgModule({
   declarations: [
@@ -39,7 +45,10 @@ import { CreateListPostsComponent } from './create-list-posts/create-list-posts.
     FeedComponent,
     HomepageComponent,
     MainFeedComponent,
-    CreateListPostsComponent
+    CreateListPostsComponent,
+    SettingsComponent,
+    ProfileComponent,
+    SuggestionsProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -60,13 +69,16 @@ import { CreateListPostsComponent } from './create-list-posts/create-list-posts.
     UsuarioModule,
     HttpClientModule,
     PostagemModule,
+    MatButtonToggleModule
   ],
   exports: [
     ModalComponent,
     MenuFeedComponent,
     FeedComponent,
     MainFeedComponent,
-    PerfilFeedComponent
+    PerfilFeedComponent,
+    CreateListPostsComponent,
+    SuggestionsProfileComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

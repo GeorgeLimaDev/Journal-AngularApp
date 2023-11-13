@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import {AppComponent} from "./app.component";
 import {HomepageComponent} from "./pages/homepage/homepage.component";
 import {FeedComponent} from "./pages/feed/feed.component";
+import {ProfileComponent} from "./pages/profile/profile.component";
+import {SettingsComponent} from "./shared/settings/settings.component";
 
 const routes: Routes = [
   {
@@ -12,6 +14,14 @@ const routes: Routes = [
   {
     path: 'feed',
     component: FeedComponent
+  },
+  {
+    path: 'profile',
+    component: ProfileComponent
+  },
+  {
+    path: 'settings',
+    component: SettingsComponent
   }
 ];
 

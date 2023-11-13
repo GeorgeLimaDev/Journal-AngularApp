@@ -4,10 +4,10 @@
 </div>
 <mat-list role="list">
    <mat-action-list>
-    <button mat-list-item >Feed</button>
-    <button mat-list-item >Profile</button>
-    <button mat-list-item >Settings</button>
-    <button mat-list-item >Logout</button>
+    <button mat-list-item [routerLink]="['/feed']">Feed</button>
+    <button mat-list-item [routerLink]="['/profile']">Profile</button>
+    <button mat-list-item (click)="openDialog()">Settings</button>
+    <button mat-list-item [routerLink]="['']" >Logout</button>
    </mat-action-list>
 </mat-list>
 

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { SettingsComponent } from "../settings/settings.component";
+import { MatDialog } from "@angular/material/dialog";
 
 @Component({
   selector: 'app-menu-feed',
@@ -7,4 +9,10 @@ import { Component } from '@angular/core';
 })
 export class MenuFeedComponent {
 
+  constructor(public dialog: MatDialog) {}
+openDialog() {
+  this.dialog.open(SettingsComponent, {
+    width: '50%'
+  })
+}
 }

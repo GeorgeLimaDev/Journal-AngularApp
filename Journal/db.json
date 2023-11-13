@@ -83,6 +83,20 @@
       "solicitacoes": [],
       "notificacoes": [],
       "logado": false
+    },
+    {
+      "id": 8,
+      "nickname": "teste12",
+      "senha": "123",
+      "link": "www.journal.app/user/",
+      "nome": "any",
+      "email": "any",
+      "postagens": [],
+      "seguidores": [],
+      "seguindo": [],
+      "solicitacoes": [],
+      "notificacoes": [],
+      "logado": false
     }
   ],
   "postagens": [
@@ -324,6 +338,138 @@
       },
       "link": "www.journal.app/danielmendesfeels/1",
       "conteudo": "Post test #8",
+      "privacidade": "",
+      "timestamp": 0,
+      "comentarios": []
+    },
+    {
+      "id": 12,
+      "autor": {
+        "id": "",
+        "nickname": "danielmendesfeels",
+        "senha": "12345",
+        "link": "www.journal.app/user/danielmendesfeels",
+        "nome": "Daniel Mendes",
+        "email": "daniel.mendes@user.com",
+        "postagens": [],
+        "seguidores": [],
+        "seguindo": [],
+        "solicitacoes": [],
+        "notificacoes": [],
+        "logado": false
+      },
+      "link": "www.journal.app/danielmendesfeels/1",
+      "conteudo": "9uyy8g7g",
+      "privacidade": "",
+      "timestamp": 0,
+      "comentarios": []
+    },
+    {
+      "id": 13,
+      "autor": {
+        "id": "",
+        "nickname": "danielmendesfeels",
+        "senha": "12345",
+        "link": "www.journal.app/user/danielmendesfeels",
+        "nome": "Daniel Mendes",
+        "email": "daniel.mendes@user.com",
+        "postagens": [],
+        "seguidores": [],
+        "seguindo": [],
+        "solicitacoes": [],
+        "notificacoes": [],
+        "logado": false
+      },
+      "link": "www.journal.app/danielmendesfeels/1",
+      "conteudo": "hey youu",
+      "privacidade": "",
+      "timestamp": 0,
+      "comentarios": []
+    },
+    {
+      "id": 14,
+      "autor": {
+        "id": "",
+        "nickname": "danielmendesfeels",
+        "senha": "12345",
+        "link": "www.journal.app/user/danielmendesfeels",
+        "nome": "Daniel Mendes",
+        "email": "daniel.mendes@user.com",
+        "postagens": [],
+        "seguidores": [],
+        "seguindo": [],
+        "solicitacoes": [],
+        "notificacoes": [],
+        "logado": false
+      },
+      "link": "www.journal.app/danielmendesfeels/1",
+      "conteudo": "ta funcional, uhul",
+      "privacidade": "",
+      "timestamp": 0,
+      "comentarios": []
+    },
+    {
+      "id": 15,
+      "autor": {
+        "id": "",
+        "nickname": "danielmendesfeels",
+        "senha": "12345",
+        "link": "www.journal.app/user/danielmendesfeels",
+        "nome": "Daniel Mendes",
+        "email": "daniel.mendes@user.com",
+        "postagens": [],
+        "seguidores": [],
+        "seguindo": [],
+        "solicitacoes": [],
+        "notificacoes": [],
+        "logado": false
+      },
+      "link": "www.journal.app/danielmendesfeels/1",
+      "conteudo": "      ",
+      "privacidade": "",
+      "timestamp": 0,
+      "comentarios": []
+    },
+    {
+      "id": 16,
+      "autor": {
+        "id": "",
+        "nickname": "danielmendesfeels",
+        "senha": "12345",
+        "link": "www.journal.app/user/danielmendesfeels",
+        "nome": "Daniel Mendes",
+        "email": "daniel.mendes@user.com",
+        "postagens": [],
+        "seguidores": [],
+        "seguindo": [],
+        "solicitacoes": [],
+        "notificacoes": [],
+        "logado": false
+      },
+      "link": "www.journal.app/danielmendesfeels/1",
+      "conteudo": "heyy",
+      "privacidade": "",
+      "timestamp": 0,
+      "comentarios": []
+    },
+    {
+      "id": 17,
+      "autor": {
+        "id": "",
+        "nickname": "danielmendesfeels",
+        "senha": "12345",
+        "link": "www.journal.app/user/danielmendesfeels",
+        "nome": "Daniel Mendes",
+        "email": "daniel.mendes@user.com",
+        "postagens": [],
+        "seguidores": [],
+        "seguindo": [],
+        "solicitacoes": [],
+        "notificacoes": [],
+        "logado": false
+      },
+      "link": "www.journal.app/danielmendesfeels/1",
+      "conteudo": "hello",
       "privacidade": "",
       "timestamp": 0,
       "comentarios": []

@@ -59,14 +59,14 @@ export class HomepageComponent implements OnInit, OnDestroy {
   }
 
   private startColorChange(): void {
-    this.colorChangeInterval = interval(5000).subscribe(() => {
+    this.colorChangeInterval = interval(3000).subscribe(() => {
       this.currentIndex = (this.currentIndex + 1) % this.colors.length;
       this.updateBackgroundColor();
     });
   }
 
   private startImageChange(): void {
-    this.imageChangeInterval = interval(5000).subscribe(() => {
+    this.imageChangeInterval = interval(3000).subscribe(() => {
       this.currentIndex = (this.currentIndex + 1) % this.images.length;
       this.updateBackgroundColorAndImage();
     });
