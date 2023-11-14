@@ -1,7 +1,6 @@
 .menu {
-
   top: 20px;
-  background-color: #e8dcbf;
+  background-color: #EDCF18;
   width: 100%;
   height: 100%;
   border-radius: 20px;
@@ -13,15 +12,15 @@
   margin-left: 5rem;
 
   .title {
-    font-size: 250%;
+    font-size: 2rem;
     font-family: "Satisfy", cursive;
     margin-top: 2rem;
     font-weight: bold;
   }
 
-  .title:hover {
+  /*.title:hover {
     font-size: 275%;
-  }
+  }*/
 }
 
 footer {
@@ -29,8 +28,8 @@ footer {
   font-size: small;
   text-align: center;
   padding: 0.5rem;
-  background-color: #E8DCBF;
-  margin-top: 30rem;
+  background-color: #EDCF18;
+  margin-top: 31.5rem;
 }
 
 a {
@@ -42,5 +41,9 @@ a {
 i {
   margin: 0.5rem;
   font-size: 1.5rem;
+}
+
+svg {
+  margin-right: 0.5rem;
 }
 

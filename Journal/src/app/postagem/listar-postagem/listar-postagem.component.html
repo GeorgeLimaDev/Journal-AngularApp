@@ -2,9 +2,7 @@
 
   <mat-card-content class="post" *ngFor="let postagem of postagens">
     <mat-card-header>
-      <div mat-card-avatar class="header-image">
-        <img src="https://img.freepik.com/free-photo/portrait-serious-confident-male-office-worker-spectacles-formal-shirt-with-dark-skin-poses-spacious-cabinet_273609-3441.jpg" alt="">
-      </div>
+      <div mat-card-avatar class="avatar-image"></div>
       <mat-card-title>{{postagem.autor.nome}}</mat-card-title>
       <mat-card-subtitle>{{postagem.autor.nickname}}</mat-card-subtitle>
     </mat-card-header>

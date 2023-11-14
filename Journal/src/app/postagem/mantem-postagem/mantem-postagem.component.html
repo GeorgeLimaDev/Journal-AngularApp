@@ -1,12 +1,12 @@
 <mat-card class="rounded-card">
   <mat-card-content>
     <mat-form-field class="textarea">
-      <textarea [(ngModel)]="postagem.conteudo" matInput placeholder="Write your thoughts in here!"></textarea>
+      <textarea [(ngModel)]="postagem.conteudo" matInput placeholder="What's on your mind?"></textarea>
     </mat-form-field>
-    <mat-chip-listbox aria-label="publico/restrito/só para mim">
-      <mat-chip-option>público</mat-chip-option>
-      <mat-chip-option>restrito</mat-chip-option>
-      <mat-chip-option color="primary" selected>só para mim</mat-chip-option>
+    <mat-chip-listbox aria-label="Public / Restricted / Private">
+      <mat-chip-option title="Everyone on Joournal will see the post">Public</mat-chip-option>
+      <mat-chip-option title="Only your approved followers will see the post">Restricted</mat-chip-option>
+      <mat-chip-option title="Only yourself will see the post" color="primary" selected>Private</mat-chip-option>
 
       <button (click)="inserir()" class="btn" mat-raised-button color="primary">Publish</button>
     </mat-chip-listbox>
