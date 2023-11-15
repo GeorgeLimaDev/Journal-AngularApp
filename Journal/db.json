@@ -69,34 +69,6 @@
       "solicitacoes": [],
       "notificacoes": [],
       "logado": false
-    },
-    {
-      "id": 7,
-      "nickname": "test3",
-      "senha": "12345",
-      "link": "www.journal.app/user/",
-      "nome": "test3",
-      "email": "test@test.com",
-      "postagens": [],
-      "seguidores": [],
-      "seguindo": [],
-      "solicitacoes": [],
-      "notificacoes": [],
-      "logado": false
-    },
-    {
-      "id": 8,
-      "nickname": "teste12",
-      "senha": "123",
-      "link": "www.journal.app/user/",
-      "nome": "any",
-      "email": "any",
-      "postagens": [],
-      "seguidores": [],
-      "seguindo": [],
-      "solicitacoes": [],
-      "notificacoes": [],
-      "logado": false
     }
   ],
   "postagens": [
@@ -162,6 +134,28 @@
       },
       "link": "www.journal.app/danielmendesfeels/1",
       "conteudo": "\"Today's adventure led me to the mountains. The air was crisp, and the scent of pine surrounded me as I hiked to the summit. The view from the top took my breath away – a panoramic display of nature's grandeur. I sat on a rock, feeling the connection with the earth and the vastness of the sky above. Shared a quiet moment with a friendly mountain squirrel, appreciating the beauty of wildlife. As the sun dipped below the peaks, I set up a campfire and enjoyed a cozy evening under the stars. Grateful for the majesty of the mountains and the serenity they bring. #MountainEscape #NatureAdventure #Gratitude\"",
+      "privacidade": "",
+      "timestamp": 0,
+      "comentarios": []
+    },
+    {
+      "id": 5,
+      "autor": {
+        "id": "",
+        "nickname": "danielmendesfeels",
+        "senha": "12345",
+        "link": "www.journal.app/user/danielmendesfeels",
+        "nome": "Daniel Mendes",
+        "email": "daniel.mendes@user.com",
+        "postagens": [],
+        "seguidores": [],
+        "seguindo": [],
+        "solicitacoes": [],
+        "notificacoes": [],
+        "logado": false
+      },
+      "link": "www.journal.app/danielmendesfeels/1",
+      "conteudo": "Is it working?",
       "privacidade": "",
       "timestamp": 0,
       "comentarios": []

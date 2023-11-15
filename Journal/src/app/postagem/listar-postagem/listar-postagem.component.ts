@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {Postagem} from "../../shared/model/postagem";
-import {PostagemService} from "../../shared/services/postagem.service";
+import { Postagem } from "../../shared/model/postagem";
+import { PostagemService } from "../../shared/services/postagem.service";
+import { takeUntil } from 'rxjs/operators';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-listar-postagem',
@@ -9,14 +11,27 @@ import {PostagemService} from "../../shared/services/postagem.service";
 })
 export class ListarPostagemComponent implements OnInit {
   postagens: Postagem[] = [];
+  private unsubscribe$: Subject<void> = new Subject<void>();
 
-  constructor(private postagemService: PostagemService) {
-  }
+  constructor(private postagemService: PostagemService) { }
 
   ngOnInit() {
+    this.atualizarPostagens();
+    this.postagemService.postagemInserida$
+      .pipe(takeUntil(this.unsubscribe$))
+      .subscribe(novaPostagem => {
+        this.postagens.unshift(novaPostagem); // Adiciona a nova postagem no início da lista
+      });
+  }
+
+  ngOnDestroy() {
+    this.unsubscribe$.next();
+    this.unsubscribe$.complete();
+  }
+
+  atualizarPostagens() {
     this.postagemService.listar().subscribe(postagens => {
-      this.postagens = postagens.reverse() //Listando em reverso para que as mais recentes apareçam no início.
-    }
-    );
+      this.postagens = postagens.reverse();
+    });
   }
 }

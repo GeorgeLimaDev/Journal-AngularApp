@@ -25,7 +25,7 @@ export class MantemPostagemComponent {
     this.postagemService.inserir(this.postagem).subscribe(
       postagemCriada => {
         console.log(`Post ${this.postagem.id} was created.`)
-        window.alert(`Thanks, ${this.autor.nome}. Your post was created. Please refresh to view it.`)
+        this.postagem = new Postagem("",this.autor, "","","",0);
       }
     );
 
