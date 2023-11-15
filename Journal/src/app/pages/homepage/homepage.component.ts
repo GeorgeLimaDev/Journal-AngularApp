@@ -4,6 +4,7 @@ import { map } from 'rxjs/operators';
 import { DialogService } from '../../dialog/dialogService';
 import { Usuario } from '../../shared/model/usuario';
 import {UsuarioService} from "../../shared/services/usuario.service";
+import {LoginAuthService} from "../../shared/services/login-auth.service"
 
 @Component({
   selector: 'app-homepage',
@@ -25,22 +26,14 @@ export class HomepageComponent implements OnInit, OnDestroy {
   currentImageUrl: string = '';
   imageOpacity: number = 1;
 
-  constructor(private dialogService: DialogService, private usuarioService: UsuarioService) {
+  constructor(private dialogService: DialogService, private usuarioService: UsuarioService, private authService: LoginAuthService) {
     this.usuarios = [];
     this.nicknameDigitado = "";
     this.senhaDigitada = "";
   }
 
-  //Tentativa de validar os dados de login. Melhor deixar para depois.
-  validateLogin(usuario: Usuario): Observable<boolean> {
-    return this.usuarioService.listar().pipe(
-      map((usuarios: Usuario[]) => {
-        const userFound = usuarios.find(
-          u => u.nickname === this.nicknameDigitado && u.senha === this.senhaDigitada
-        );
-        return !!userFound;
-      })
-    );
+  validarLogin (nicknameDigitado: string, senhaDigitada: string) {
+    this.authService.login(nicknameDigitado, senhaDigitada);
   }
 
   ngOnInit(): void {

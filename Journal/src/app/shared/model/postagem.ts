@@ -11,11 +11,7 @@ export class Postagem {
     public timestamp: number,
     public comentarios: Comentario[] = []
   ) {
-    this.link = this.linkPost();
-  }
-
-  linkPost() {
-    return `www.journal.app/${this.autor.nickname}/${this.autor.countPostagens()+1}`
+    this.link = "www.journal.app/post";
   }
 
   addComentario(novoComentario: Comentario) {

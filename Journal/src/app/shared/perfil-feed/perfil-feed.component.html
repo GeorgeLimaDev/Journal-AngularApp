@@ -5,16 +5,18 @@
 
 <mat-card class="perfil-card">
     <mat-card-header>
-        <div mat-card-avatar class="avatar-image"></div>
-        <mat-card-subtitle class="title">Daniel Mendes</mat-card-subtitle>
-        <mat-card-subtitle class="title">@danielmendesfeels</mat-card-subtitle>
+      <div mat-card-avatar class="example-header-image">
+        <img class="avatarImg" src="{{currentUserSubject?.avatar}}" alt="">
+      </div>
+        <mat-card-subtitle class="title">{{currentUserSubject?.nome}}</mat-card-subtitle>
+        <mat-card-subtitle class="title">@{{currentUserSubject?.nickname}}</mat-card-subtitle>
 
     </mat-card-header>
 
     <mat-card-actions class="actions">
-        <button mat-button class="action">Posts</button>
-        <button mat-button class="action">Followers</button>
-        <button mat-button class="action">Following</button>
+        <button mat-button class="action">Posts:  {{currentUserSubject?.postagens?.length}}</button>
+        <button mat-button class="action">Followers:  {{currentUserSubject?.seguidores?.length}}</button>
+        <button mat-button class="action">Following:  {{currentUserSubject?.seguindo?.length}}</button>
     </mat-card-actions>
 </mat-card>
 

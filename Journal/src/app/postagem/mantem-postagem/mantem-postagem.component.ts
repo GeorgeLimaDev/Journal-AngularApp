@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {Usuario} from "../../shared/model/usuario";
 import {Postagem} from "../../shared/model/postagem";
 import {PostagemService} from "../../shared/services/postagem.service";
+import {UsuarioLogadoService} from "../../shared/services/usuario-logado.service"
 
 
 @Component({
@@ -14,14 +15,13 @@ export class MantemPostagemComponent {
   postagem: Postagem;
   postagens: Postagem[] = [];
 
-  constructor(private postagemService: PostagemService) {
-    this.autor = new Usuario("","danielmendesfeels","12345","","Daniel Mendes", "daniel.mendes@user.com"); //Aqui deveria ler o usuário logado para atribuir como autor.
+  constructor(private postagemService: PostagemService, private UsuarioLogadoService: UsuarioLogadoService) {
+    this.autor = UsuarioLogadoService.getCurrentUser();
     this.postagem = new Postagem("",this.autor, "","","",0);
 
   }
 
   inserir() {
-    /*let postAInserir: Postagem = this.postagem;*/
     this.postagemService.inserir(this.postagem).subscribe(
       postagemCriada => {
         console.log(`Post ${this.postagem.id} was created.`)

@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Usuario} from "../../shared/model/usuario";
 import {UsuarioService} from "../../shared/services/usuario.service";
+import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-listar-usuario',
@@ -16,7 +17,15 @@ export class ListarUsuarioComponent implements OnInit {
 
   ngOnInit() {
     this.usuarioService.listar().subscribe(
-      usuarios => this.usuarios = usuarios.reverse()
+      usuarios => this.usuarios = usuarios
     );
+  }
+
+  listar(): Usuario[] {
+    this.usuarioService.listar().subscribe(
+      usuarios => {this.usuarios = usuarios
+      return this.usuarios }
+    );
+    return [];
   }
 }

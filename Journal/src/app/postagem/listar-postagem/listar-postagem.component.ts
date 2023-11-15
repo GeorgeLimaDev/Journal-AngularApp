@@ -16,7 +16,7 @@ export class ListarPostagemComponent implements OnInit {
   constructor(private postagemService: PostagemService) { }
 
   ngOnInit() {
-    this.atualizarPostagens();
+    this.listar();
     this.postagemService.postagemInserida$
       .pipe(takeUntil(this.unsubscribe$))
       .subscribe(novaPostagem => {
@@ -29,7 +29,7 @@ export class ListarPostagemComponent implements OnInit {
     this.unsubscribe$.complete();
   }
 
-  atualizarPostagens() {
+  listar() {
     this.postagemService.listar().subscribe(postagens => {
       this.postagens = postagens.reverse();
     });
