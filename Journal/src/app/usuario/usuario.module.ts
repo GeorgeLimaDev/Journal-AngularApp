@@ -6,6 +6,7 @@ import {MatDialogModule} from "@angular/material/dialog";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import { ListarUsuarioComponent } from './listar-usuario/listar-usuario.component';
+import {MatCardModule} from "@angular/material/card";
 
 
 
@@ -16,15 +17,17 @@ import { ListarUsuarioComponent } from './listar-usuario/listar-usuario.componen
         ListarUsuarioComponent,
     ],
     exports: [
-        MantemUsuarioComponent
+        MantemUsuarioComponent,
+        ListarUsuarioComponent
     ],
-    imports: [
-        CommonModule,
-        FormsModule,
-        MatDialogModule,
-        MatFormFieldModule,
-        MatInputModule,
-        ReactiveFormsModule
-    ]
+  imports: [
+    CommonModule,
+    FormsModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule,
+    ReactiveFormsModule,
+    MatCardModule
+  ]
 })
 export class UsuarioModule { }

@@ -7,19 +7,4 @@ import { Usuario } from '../model/usuario';
   templateUrl: './perfil-feed.component.html',
   styleUrls: ['./perfil-feed.component.scss'],
 })
-export class PerfilFeedComponent implements OnInit {
-  currentUserSubject: Usuario | null;
-
-  constructor(private usuarioLogadoService: UsuarioLogadoService) {
-    this.currentUserSubject = this.fetchUsuarioLogado();
-  }
-
-  ngOnInit(): void {
-
-  }
-
-  fetchUsuarioLogado() {
-    console.log(this.usuarioLogadoService.getCurrentUser());
-    return this.usuarioLogadoService.getCurrentUser();
-  }
-}
+export class PerfilFeedComponent {}

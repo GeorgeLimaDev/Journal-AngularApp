@@ -110,6 +110,21 @@
       "solicitacoes": [],
       "notificacoes": [],
       "logado": false
+    },
+    {
+      "id": 10,
+      "nickname": "unlike",
+      "senha": "12345",
+      "link": "www.journal.app/user/",
+      "nome": "juan",
+      "email": "juan@mail",
+      "avatar": "https://st3.depositphotos.com/6672868/13701/v/450/depositphotos_137014128-stock-illustration-user-profile-icon.jpg",
+      "postagens": [],
+      "seguidores": [],
+      "seguindo": [],
+      "solicitacoes": [],
+      "notificacoes": [],
+      "logado": false
     }
   ],
   "postagens": [
