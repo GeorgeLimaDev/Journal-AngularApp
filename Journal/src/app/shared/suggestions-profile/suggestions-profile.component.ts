@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ListarUsuarioComponent } from "../../usuario/listar-usuario/listar-usuario.component"
+import {ListarUsuarioComponent} from "../../usuario/listar-usuario/listar-usuario.component"
 
 @Component({
   selector: 'app-suggestions-profile',
@@ -7,5 +7,10 @@ import { ListarUsuarioComponent } from "../../usuario/listar-usuario/listar-usua
   styleUrls: ['./suggestions-profile.component.scss']
 })
 export class SuggestionsProfileComponent {
+
+  constructor() {
+  }
+
+
 
 }

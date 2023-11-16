@@ -6,6 +6,7 @@ import {MatDialogModule} from "@angular/material/dialog";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import { ListarUsuarioComponent } from './listar-usuario/listar-usuario.component';
+import {MatButtonModule} from "@angular/material/button";
 import {MatCardModule} from "@angular/material/card";
 
 
@@ -27,6 +28,7 @@ import {MatCardModule} from "@angular/material/card";
     MatFormFieldModule,
     MatInputModule,
     ReactiveFormsModule,
+    MatButtonModule,
     MatCardModule
   ]
 })

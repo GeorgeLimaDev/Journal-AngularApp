@@ -20,7 +20,7 @@ export class SettingsComponent {
     this.novonickname = usuarioLogado.getCurrentUser().nickname;
     this.novasenha = usuarioLogado.getCurrentUser().senha;
     this.novonome = usuarioLogado.getCurrentUser().nome;
-    this.usuarioEditado = new Usuario(this.usuarioLogado.getCurrentUser().id, this.novonickname, this.novasenha, this.usuarioLogado.getCurrentUser().link, this.novonome, this.usuarioLogado.getCurrentUser().email)
+    this.usuarioEditado = new Usuario(this.usuarioLogado.getCurrentUser().id, this.novonickname, this.novasenha, this.usuarioLogado.getCurrentUser().link, this.novonome, this.usuarioLogado.getCurrentUser().email, this.usuarioLogado.getCurrentUser().avatar)
   }
   remover(): void {
     this.usuarioLogado.remover(this.usuarioLogado.getCurrentUser());

@@ -36,7 +36,7 @@ export class UsuarioLogadoService implements OnInit{
   editar(usuario: Usuario) {
     console.log(usuario);
     window.alert(`the user ${usuario.nickname} was edited!`);
-    return this.httpClient.put(`${this.URL_usuarios}/${usuario.id}`, usuario).subscribe(
+    return this.httpClient.put<Usuario>(`${this.URL_usuarios}/${usuario.id}`, usuario).subscribe(
         usuarioRemovido => {
           console.log('Usuario editado')
         }
