@@ -1,16 +1,17 @@
 import { HttpClient } from '@angular/common/http';
 import {Injectable, OnInit} from '@angular/core';
 import {Usuario} from "../model/usuario";
-import {LoginAuthService} from "./login-auth.service"
 
 @Injectable({
   providedIn: 'root'
 })
 export class UsuarioLogadoService implements OnInit{
+  URL_usuarios: string;
   private currentUserSubject: Usuario;
 
-  constructor(private http: HttpClient) {
+  constructor(private httpClient: HttpClient) {
     this.currentUserSubject = new Usuario("","","","","","", "");
+    this.URL_usuarios = 'http://localhost:3000/usuarios';
   }
 
   ngOnInit() {
@@ -24,4 +25,21 @@ export class UsuarioLogadoService implements OnInit{
     return this.currentUserSubject;
   }
 
-}
+  remover(usuario: Usuario) {
+    console.log(usuario);
+    window.alert(`the user ${usuario.nickname} was deleted!`);
+    return this.httpClient.delete(`${this.URL_usuarios}/${usuario.id}`).subscribe(
+        usuarioRemovido => {
+          console.log('Usuario removido')}
+    );
+  }
+  editar(usuario: Usuario) {
+    console.log(usuario);
+    window.alert(`the user ${usuario.nickname} was edited!`);
+    return this.httpClient.put(`${this.URL_usuarios}/${usuario.id}`, usuario).subscribe(
+        usuarioRemovido => {
+          console.log('Usuario editado')
+        }
+    );
+  }
+ }

@@ -20,5 +20,4 @@ export class UsuarioService {
   listar(): Observable<Usuario[]> {
     return this.httpClient.get<Usuario[]>(this.URL_usuarios);
   }
-
 }

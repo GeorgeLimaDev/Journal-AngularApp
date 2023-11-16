@@ -2,6 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {Usuario} from "../../shared/model/usuario";
 import {UsuarioService} from "../../shared/services/usuario.service";
 import {Observable} from "rxjs";
+import {HttpClient} from "@angular/common/http";
+import { UsuarioLogadoService } from "../../shared/services/usuario-logado.service";
 
 @Component({
   selector: 'app-listar-usuario',
@@ -9,10 +11,12 @@ import {Observable} from "rxjs";
   styleUrls: ['./listar-usuario.component.scss']
 })
 export class ListarUsuarioComponent implements OnInit {
+  URL_usuarios: 'http://localhost:3000/usuarios';
   usuarios: Usuario[];
 
-  constructor(private usuarioService: UsuarioService) {
+  constructor(private usuarioService: UsuarioService, private httpClient: HttpClient, private usuarioLogadoService: UsuarioLogadoService) {
     this.usuarios = [];
+    this.URL_usuarios = 'http://localhost:3000/usuarios';
   }
 
   ngOnInit() {

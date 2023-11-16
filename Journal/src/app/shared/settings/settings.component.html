@@ -1,7 +1,27 @@
 <section class="modal">
   <h1 mat-dialog-title>Settings</h1>
   <div mat-dialog-content>
+    <p>Edit your profile informations below:</p>
 
+    <form>
+      <mat-form-field>
+        <mat-label>Nickname</mat-label>
+        <input matInput [(ngModel)]="usuarioLogado.getCurrentUser().nickname" name="nickname">
+      </mat-form-field>
+      <br>
+      <mat-form-field>
+        <mat-label>Senha</mat-label>
+        <input matInput [(ngModel)]="usuarioLogado.getCurrentUser().senha" type="password" name="senha">
+      </mat-form-field>
+      <br>
+      <mat-form-field>
+        <mat-label>Nome</mat-label>
+        <input matInput [(ngModel)]="usuarioLogado.getCurrentUser().nome" name="nome">
+      </mat-form-field>
+      <button mat-raised-button mat-dialog-close color="warn" (click)="editar()">save changes</button>
+    </form>
+
+      <button mat-raised-button mat-dialog-close color="warn" (click)="remover()">delete account</button>
     <div mat-dialog-actions>
       <button class="btn" mat-raised-button color="primary" mat-dialog-close>Close</button>
     </div>

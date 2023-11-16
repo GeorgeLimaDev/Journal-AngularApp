@@ -31,6 +31,8 @@ import { SettingsComponent } from './shared/settings/settings.component';
 import { ProfileComponent } from "./pages/profile/profile.component";
 import { SuggestionsProfileComponent } from './shared/suggestions-profile/suggestions-profile.component';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { Main1ProfileComponent } from './shared/main1-profile/main1-profile.component';
+import { Main2ProfileComponent } from './shared/main2-profile/main2-profile.component';
 
 
 
@@ -48,7 +50,9 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
     CreateListPostsComponent,
     SettingsComponent,
     ProfileComponent,
-    SuggestionsProfileComponent
+    SuggestionsProfileComponent,
+    Main1ProfileComponent,
+    Main2ProfileComponent
   ],
   imports: [
     BrowserModule,
