@@ -10,9 +10,6 @@ import {MatInputModule} from "@angular/material/input";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatButtonToggleModule} from "@angular/material/button-toggle";
 
-
-
-
 @NgModule({
   declarations: [
     MantemPostagemComponent,

@@ -5,7 +5,7 @@ import {Postagem} from "./postagem";
 export class Usuario {
   constructor(
     public id: string,
-    public nickname: string, //Implementar regra para não poder conter espaços.
+    public nickname: string,
     public senha: string,
     public link: string = '',
     public nome: string,

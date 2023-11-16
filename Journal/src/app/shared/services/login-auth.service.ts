@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import {UsuarioService} from "./usuario.service"
-import {HttpClient} from "@angular/common/http";
 import {Router} from "@angular/router";
 import {UsuarioLogadoService} from "./usuario-logado.service"
 import {Usuario} from "../model/usuario";
@@ -10,7 +9,7 @@ import {Usuario} from "../model/usuario";
 })
 export class LoginAuthService {
 
-  constructor(private http: HttpClient, private router: Router, private usersService: UsuarioService, private usuarioLogadoService: UsuarioLogadoService) {
+  constructor(private router: Router, private usersService: UsuarioService, private usuarioLogadoService: UsuarioLogadoService) {
   }
 
   login(nickname:string, senha:string){

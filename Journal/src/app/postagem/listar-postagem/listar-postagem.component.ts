@@ -34,4 +34,5 @@ export class ListarPostagemComponent implements OnInit {
       this.postagens = postagens.reverse();
     });
   }
+
 }

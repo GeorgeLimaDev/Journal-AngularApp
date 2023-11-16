@@ -17,18 +17,15 @@ export class MantemPostagemComponent {
 
   constructor(private postagemService: PostagemService, private UsuarioLogadoService: UsuarioLogadoService) {
     this.autor = UsuarioLogadoService.getCurrentUser();
-    this.postagem = new Postagem("",this.autor, "","","",0);
+    this.postagem = new Postagem("",this.autor, "","","",Date.now());
 
   }
 
   inserir() {
     this.postagemService.inserir(this.postagem).subscribe(
-      postagemCriada => {
-        console.log(`Post ${this.postagem.id} was created.`)
-        this.postagem = new Postagem("",this.autor, "","","",0);
-      }
+      postagemCriada => {}
     );
-
+    this.postagem = new Postagem("",this.autor, "","","",Date.now());
   }
 
 }

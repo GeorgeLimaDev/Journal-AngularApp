@@ -20,8 +20,7 @@ export class DadoPerfilComponent implements OnInit {
   }
 
   fetchUsuarioLogado() {
-    console.log(this.usuarioLogadoService.getCurrentUser());
     return this.usuarioLogadoService.getCurrentUser();
   }
-}
 
+}

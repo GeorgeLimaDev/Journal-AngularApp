@@ -10,7 +10,6 @@ import {DialogService} from "./dialogService";
 export class DialogComponent {
   constructor(@Inject(MAT_DIALOG_DATA) public data: any, public dialogRef: MatDialogRef<DialogService>) { }
 
-// To close the dialog and pass data back to the calling component
   closeDialog(result: any): void {
     this.dialogRef.close(result);
   }

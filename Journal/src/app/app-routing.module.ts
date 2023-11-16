@@ -18,10 +18,6 @@ const routes: Routes = [
   {
     path: 'profile',
     component: ProfileComponent
-  },
-  {
-    path: 'settings',
-    component: SettingsComponent
   }
 ];
 

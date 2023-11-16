@@ -15,7 +15,7 @@ button {
   font-weight: bold;
   cursor: pointer;
   overflow: hidden;
-  z-index: 1; /* Ensure the button is above the pseudo-element */
+  z-index: 1;
 }
 
 button::before {
@@ -27,7 +27,7 @@ button::before {
   height: 100%;
   background-color: #d3ff60;
   transition: left 0.3s ease-in-out;
-  z-index: -1; /* Ensure the pseudo-element is behind the button */
+  z-index: -1;
 }
 
 button:hover::before {

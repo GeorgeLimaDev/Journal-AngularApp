@@ -29,8 +29,6 @@ export class OwnPostsComponent implements OnInit {
 
   }
 
-
-
   ngOnDestroy() {
     this.unsubscribe$.next();
     this.unsubscribe$.complete();
@@ -40,10 +38,8 @@ export class OwnPostsComponent implements OnInit {
     this.postagemService.listar().subscribe(postagens => {
       let postagemDoUsuario: Postagem[] = postagens.filter(postagem => postagem.autor.id === this.usuarioLogado.getCurrentUser().id);
       this.postagens = postagemDoUsuario.reverse();
-      console.log(this.postagens);
       this.contPostagens = this.postagens.length
     });
-
   }
 
 }

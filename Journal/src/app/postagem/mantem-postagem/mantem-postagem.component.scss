@@ -3,7 +3,7 @@
   background-color: snow;
   display: flex;
   justify-content: center;
-  align-items: center; /* Added align-items for vertical centering */
+  align-items: center;
   height: 30vh;
 }
 
@@ -32,7 +32,6 @@ mat-chip-option {
 }
 
 .header-image {
-  background-image: url('https://img.freepik.com/free-photo/portrait-serious-confident-male-office-worker-spectacles-formal-shirt-with-dark-skin-poses-spacious-cabinet_273609-3441.jpg?w=1060&t=st=1699251537~exp=1699252137~hmac=2f116f6f15761858c1749deaa33df49fd3e187ff12fe5fe7bf6a91e5e125d19d');
   background-size: cover;
 }
 

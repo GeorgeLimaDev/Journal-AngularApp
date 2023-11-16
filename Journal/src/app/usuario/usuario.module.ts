@@ -9,9 +9,6 @@ import { ListarUsuarioComponent } from './listar-usuario/listar-usuario.componen
 import {MatButtonModule} from "@angular/material/button";
 import {MatCardModule} from "@angular/material/card";
 
-
-
-
 @NgModule({
     declarations: [
         MantemUsuarioComponent,

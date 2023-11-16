@@ -1,6 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { UsuarioLogadoService } from '../services/usuario-logado.service';
-import { Usuario } from '../model/usuario';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-perfil-feed',

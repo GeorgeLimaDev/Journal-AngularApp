@@ -15,8 +15,7 @@ export class DialogService {
       data: { /* Optional data to pass to the dialog component */ }
     });
 
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
-    });
+    dialogRef.afterClosed().subscribe(result => {});
   }
+
 }

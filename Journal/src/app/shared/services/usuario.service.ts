@@ -14,10 +14,11 @@ export class UsuarioService {
   }
 
   inserir(usuario: Usuario): Observable<Usuario> {
-    //Add lógica para validar o usuário antes da inserção
     return this.httpClient.post<Usuario>(this.URL_usuarios, usuario);
   }
+
   listar(): Observable<Usuario[]> {
     return this.httpClient.get<Usuario[]>(this.URL_usuarios);
   }
+
 }

@@ -32,6 +32,6 @@ export class Solicitacao extends Notificacao {
     if (statusPossiveis.includes(novoStatus)) {
       this._status = novoStatus;
     }
-  } //Como lidar com uma exceção aqui?
+  }
 
 }

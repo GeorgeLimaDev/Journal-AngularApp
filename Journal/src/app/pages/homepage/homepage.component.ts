@@ -1,6 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { interval, Observable, Subscription } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { interval, Subscription } from 'rxjs';
 import { DialogService } from '../../dialog/dialogService';
 import { Usuario } from '../../shared/model/usuario';
 import {UsuarioService} from "../../shared/services/usuario.service";
@@ -88,4 +87,5 @@ export class HomepageComponent implements OnInit, OnDestroy {
 
     return `#${rgbToHex(fadedR, fadedG, fadedB)}`;
   }
+
 }

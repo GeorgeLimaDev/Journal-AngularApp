@@ -14,5 +14,6 @@ openDialog() {
   this.dialog.open(SettingsComponent, {
     width: '50%'
   })
-}
+  }
+
 }

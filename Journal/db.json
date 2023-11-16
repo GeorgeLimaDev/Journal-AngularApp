@@ -46,28 +46,13 @@
       "avatar": "https://images.blush.design/787e2d5da4021c3023d6d4304239323d?w=920&auto=compress&cs=srgb"
     },
     {
-      "id": 4,
-      "nickname": "UserExample1",
-      "senha": "12345",
-      "link": "www.journal.app/user/",
-      "nome": "User 1",
-      "email": "user1@mail.com",
-      "avatar": "https://st3.depositphotos.com/6672868/13701/v/450/depositphotos_137014128-stock-illustration-user-profile-icon.jpg",
-      "postagens": [],
-      "seguidores": [],
-      "seguindo": [],
-      "solicitacoes": [],
-      "notificacoes": [],
-      "logado": false
-    },
-    {
       "id": 10,
       "nickname": "unlike",
       "senha": "12345",
       "link": "www.journal.app/user/",
-      "nome": "juan",
+      "nome": "Juan",
       "email": "juan@mail",
-      "avatar": "https://st3.depositphotos.com/6672868/13701/v/450/depositphotos_137014128-stock-illustration-user-profile-icon.jpg",
+      "avatar": "https://images.blush.design/e865c02ee4bf72b73a321a29fce0a286?w=920&auto=compress&cs=srgb",
       "postagens": [],
       "seguidores": [],
       "seguindo": [],
@@ -78,30 +63,30 @@
   ],
   "postagens": [
     {
-      "id": 6,
+      "id": 1,
       "autor": {
         "id": 1,
         "nickname": "georgelima",
         "senha": "12345",
-        "link": "www.journal.app/user/",
+        "link": "www.journal.app/user/georgelima",
         "nome": "George Lima",
         "email": "george@mail.com",
+        "avatar": "https://images.blush.design/229ae78e6954b4d21b8a206ee694b44c?w=920&auto=compress&cs=srgb",
         "postagens": [],
         "seguidores": [],
         "seguindo": [],
         "solicitacoes": [],
         "notificacoes": [],
-        "logado": false,
-        "avatar": "https://images.blush.design/229ae78e6954b4d21b8a206ee694b44c?w=920&auto=compress&cs=srgb"
+        "logado": false
       },
       "link": "www.journal.app/post",
-      "conteudo": "Embarked on an urban exploration today, winding through city streets and hidden alleys. The hum of the city surrounded me as I discovered vibrant street art and bustling markets. Found solace in a quaint cafe, sipping on a rich espresso. The city lights sparkled as night fell, and I marveled at the architectural wonders. Ended the day with a jazz performance in a hidden gem of a venue, feeling the rhythm of the city pulsating through my veins. #UrbanDiscovery #CityLights #CulturalEscape",
+      "conteudo": "Morning jog to kickstart the day! 🏃‍♂️ Grateful for the crisp air and the sunrise. Ready to conquer the day's challenges! #MorningRun #FitnessGoals",
       "privacidade": "",
-      "timestamp": 0,
+      "timestamp": 1700176709948,
       "comentarios": []
     },
     {
-      "id": 7,
+      "id": 2,
       "autor": {
         "id": 2,
         "nickname": "oliviaoliva",
@@ -118,13 +103,13 @@
         "avatar": "https://images.blush.design/515f8b42eb37971ab33995147f3a3302?w=920&auto=compress&cs=srgb"
       },
       "link": "www.journal.app/post",
-      "conteudo": "Ventured into the heart of a dense forest today. The air was thick with the earthy aroma of moss and damp soil. Explored hidden trails and stumbled upon a serene waterfall, its gentle cascade creating a soothing melody. Perched on a moss-covered log, I observed a family of deer grazing in a sunlit clearing. Set up a hammock between two sturdy trees, swaying gently with the breeze. Under the canopy of stars, I listened to the nocturnal symphony of crickets and owls. #ForestRetreat #NatureWonder #SerenadeOfTheWild",
+      "conteudo": "Productive workday at the home office! 💻 Wrapped up a big project and treated myself to a cozy homemade latte. #WorkFromHome #Productivity",
       "privacidade": "",
-      "timestamp": 0,
+      "timestamp": 1700176743917,
       "comentarios": []
     },
     {
-      "id": 8,
+      "id": 3,
       "autor": {
         "id": 3,
         "nickname": "danielmendesfeels",
@@ -141,9 +126,124 @@
         "avatar": "https://images.blush.design/787e2d5da4021c3023d6d4304239323d?w=920&auto=compress&cs=srgb"
       },
       "link": "www.journal.app/post",
-      "conteudo": "Today's journey led me to a charming coastal town. The salty breeze kissed my skin as I strolled along the boardwalk, watching waves dance along the shoreline. Discovered a hidden cove with colorful seashells and silky sands, a perfect spot for quiet contemplation. Shared laughter with locals at a seaside cafe, savoring freshly caught seafood. As the sun dipped below the horizon, I built a bonfire on the beach, the crackling flames reflecting in my eyes. Gratitude for the serenity of the ocean and the warmth of coastal hospitality. #SeasideEscape #CoastalCharm #OceanBreeze",
+      "conteudo": "Coding marathon today! 💻 Building something exciting and pushing my limits. Can't wait to see the end result. #ProgrammingLife #CodePassion",
       "privacidade": "",
-      "timestamp": 0,
+      "timestamp": 1700176764666,
+      "comentarios": []
+    },
+    {
+      "id": 4,
+      "autor": {
+        "id": 10,
+        "nickname": "unlike",
+        "senha": "12345",
+        "link": "www.journal.app/user/",
+        "nome": "Juan",
+        "email": "juan@mail",
+        "avatar": "https://images.blush.design/e865c02ee4bf72b73a321a29fce0a286?w=920&auto=compress&cs=srgb",
+        "postagens": [],
+        "seguidores": [],
+        "seguindo": [],
+        "solicitacoes": [],
+        "notificacoes": [],
+        "logado": false
+      },
+      "link": "www.journal.app/post",
+      "conteudo": "Sunday family brunch at our favorite spot! 🍳🥞 Grateful for these moments and the delicious food. Family time is the best time. #FamilyBrunch #QualityTime",
+      "privacidade": "",
+      "timestamp": 1700176790858,
+      "comentarios": []
+    },
+    {
+      "id": 5,
+      "autor": {
+        "id": 1,
+        "nickname": "georgelima",
+        "senha": "12345",
+        "link": "www.journal.app/user/georgelima",
+        "nome": "George Lima",
+        "email": "george@mail.com",
+        "avatar": "https://images.blush.design/229ae78e6954b4d21b8a206ee694b44c?w=920&auto=compress&cs=srgb",
+        "postagens": [],
+        "seguidores": [],
+        "seguindo": [],
+        "solicitacoes": [],
+        "notificacoes": [],
+        "logado": false
+      },
+      "link": "www.journal.app/post",
+      "conteudo": "Just finished a fascinating book - 'The Power of Now.' Highly recommend it! 📚 Reflecting on living in the moment and embracing each day. #BookRecommendation #Mindfulness",
+      "privacidade": "",
+      "timestamp": 1700176815779,
+      "comentarios": []
+    },
+    {
+      "id": 6,
+      "autor": {
+        "id": 2,
+        "nickname": "oliviaoliva",
+        "senha": "12345",
+        "link": "www.journal.app/user/",
+        "nome": "Olivia Oliva",
+        "email": "olivia@mail.com",
+        "postagens": [],
+        "seguidores": [],
+        "seguindo": [],
+        "solicitacoes": [],
+        "notificacoes": [],
+        "logado": false,
+        "avatar": "https://images.blush.design/515f8b42eb37971ab33995147f3a3302?w=920&auto=compress&cs=srgb"
+      },
+      "link": "www.journal.app/post",
+      "conteudo": "Visited the local art gallery today. 🎨 Inspired by the creativity around me. Art has a unique way of touching the soul. #ArtAppreciation #GalleryDay",
+      "privacidade": "",
+      "timestamp": 1700176837675,
+      "comentarios": []
+    },
+    {
+      "id": 7,
+      "autor": {
+        "id": 3,
+        "nickname": "danielmendesfeels",
+        "senha": "12345",
+        "link": "www.journal.app/user/",
+        "nome": "Daniel Mendes",
+        "email": "daniel@mail.com",
+        "postagens": [],
+        "seguidores": [],
+        "seguindo": [],
+        "solicitacoes": [],
+        "notificacoes": [],
+        "logado": false,
+        "avatar": "https://images.blush.design/787e2d5da4021c3023d6d4304239323d?w=920&auto=compress&cs=srgb"
+      },
+      "link": "www.journal.app/post",
+      "conteudo": "Hiking adventure with friends in the mountains! 🏞️ Nature's beauty is truly awe-inspiring. Grateful for good company and breathtaking views. #OutdoorAdventure #NatureLover",
+      "privacidade": "",
+      "timestamp": 1700176865098,
+      "comentarios": []
+    },
+    {
+      "id": 8,
+      "autor": {
+        "id": 10,
+        "nickname": "unlike",
+        "senha": "12345",
+        "link": "www.journal.app/user/",
+        "nome": "Juan",
+        "email": "juan@mail",
+        "avatar": "https://images.blush.design/e865c02ee4bf72b73a321a29fce0a286?w=920&auto=compress&cs=srgb",
+        "postagens": [],
+        "seguidores": [],
+        "seguindo": [],
+        "solicitacoes": [],
+        "notificacoes": [],
+        "logado": false
+      },
+      "link": "www.journal.app/post",
+      "conteudo": "Started a new language course today - ¡Hola español! 🇪🇸 Excited for this language journey. Any tips from fellow language learners? #LanguageLearning #NewBeginnings",
+      "privacidade": "",
+      "timestamp": 1700176885137,
       "comentarios": []
     },
     {
@@ -152,21 +252,21 @@
         "id": 1,
         "nickname": "georgelima",
         "senha": "12345",
-        "link": "www.journal.app/user/",
+        "link": "www.journal.app/user/georgelima",
         "nome": "George Lima",
         "email": "george@mail.com",
+        "avatar": "https://images.blush.design/229ae78e6954b4d21b8a206ee694b44c?w=920&auto=compress&cs=srgb",
         "postagens": [],
         "seguidores": [],
         "seguindo": [],
         "solicitacoes": [],
         "notificacoes": [],
-        "logado": false,
-        "avatar": "https://images.blush.design/229ae78e6954b4d21b8a206ee694b44c?w=920&auto=compress&cs=srgb"
+        "logado": false
       },
       "link": "www.journal.app/post",
-      "conteudo": "Explored the vastness of the desert today. The golden sands stretched as far as the eye could see, and the sun painted the landscape with warm hues. Trekking through dunes, I marveled at the resilience of desert flora and encountered a group of camels gracefully navigating the sandy terrain. Sat atop a dune, feeling the soft grains beneath me, and admired the breathtaking desert sunset. Embraced the tranquility of the desert night, surrounded by the mystique of star-studded skies. Grateful for the simplicity and beauty of the arid wilderness. #DesertAdventure #GoldenHorizon #StarryNight",
+      "conteudo": "Spent the evening experimenting in the kitchen - homemade pizza night! 🍕👨‍🍳 Nothing like good food and good company. #CookingAdventures #PizzaNight",
       "privacidade": "",
-      "timestamp": 0,
+      "timestamp": 1700176912125,
       "comentarios": []
     },
     {
@@ -187,9 +287,9 @@
         "avatar": "https://images.blush.design/515f8b42eb37971ab33995147f3a3302?w=920&auto=compress&cs=srgb"
       },
       "link": "www.journal.app/post",
-      "conteudo": "Set out on a river expedition today, paddling through lush greenery and serene waters. The rhythmic sound of the paddle cutting through the water echoed in the stillness. Discovered a hidden waterfall cascading into a crystal-clear pool, a natural oasis. Shared laughter with fellow explorers on a riverbank picnic, surrounded by the melody of birdsong. As dusk settled in, I floated on the river in a canoe, guided by the soft glow of fireflies. Wrapped up the day with a bonfire, mesmerized by the reflections dancing on the water's surface. #RiverJourney #NatureEscape #WaterfallDiscovery",
+      "conteudo": "Sunday self-care: face masks, a good book, and calming music. 🧖‍♀️📖 Finding balance and tranquility in simple moments. #SelfCareSunday #Relaxation",
       "privacidade": "",
-      "timestamp": 0,
+      "timestamp": 1700176930690,
       "comentarios": []
     },
     {
@@ -210,32 +310,32 @@
         "avatar": "https://images.blush.design/787e2d5da4021c3023d6d4304239323d?w=920&auto=compress&cs=srgb"
       },
       "link": "www.journal.app/post",
-      "conteudo": "Wandered into a historical town today, where cobblestone streets whispered tales of the past. Explored ancient architecture, walking through narrow alleys adorned with charming boutiques. Found solace in a centuries-old library, surrounded by the scent of old books and the wisdom of the ages. Shared a cup of tea with a local historian, delving into stories of the town's rich heritage. As the evening set in, I attended a candlelit concert in a historic square, feeling the resonance of music in the heart of history. #HistoricalExploration #CulturalHeritage #TimelessTown",
+      "conteudo": "Late-night gaming session with the squad! 🎮 Unwinding and having a blast. What's your favorite game? #GamingCommunity #LateNightFun",
       "privacidade": "",
-      "timestamp": 0,
+      "timestamp": 1700176946705,
       "comentarios": []
     },
     {
       "id": 12,
       "autor": {
-        "id": 2,
-        "nickname": "oliviaoliva",
+        "id": 10,
+        "nickname": "unlike",
         "senha": "12345",
         "link": "www.journal.app/user/",
-        "nome": "Olivia Oliva",
-        "email": "olivia@mail.com",
+        "nome": "Juan",
+        "email": "juan@mail",
+        "avatar": "https://images.blush.design/e865c02ee4bf72b73a321a29fce0a286?w=920&auto=compress&cs=srgb",
         "postagens": [],
         "seguidores": [],
         "seguindo": [],
         "solicitacoes": [],
         "notificacoes": [],
-        "logado": false,
-        "avatar": "https://images.blush.design/515f8b42eb37971ab33995147f3a3302?w=920&auto=compress&cs=srgb"
+        "logado": false
       },
       "link": "www.journal.app/post",
-      "conteudo": "teste",
+      "conteudo": "Volunteered at the local animal shelter. 🐾 Heartwarming to see furry friends find loving homes. Consider adoption! #VolunteerWork #AnimalLover",
       "privacidade": "",
-      "timestamp": 0,
+      "timestamp": 1700176967314,
       "comentarios": []
     }
   ]

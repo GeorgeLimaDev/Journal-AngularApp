@@ -9,18 +9,16 @@ import {UsuarioLogadoService} from "./usuario-logado.service";
 })
 export class PostagemService {
   URL_postagens = 'http://localhost:3000/postagens';
-
-  // Subject para notificar sobre inserção de nova postagem
   private postagemInseridaSubject: Subject<Postagem> = new Subject<Postagem>();
   postagemInserida$: Observable<Postagem> = this.postagemInseridaSubject.asObservable();
-  private postagensUsuario:Postagem[]=[]
+  private postagensUsuario: Postagem[] = [];
+
   constructor(private httpClient: HttpClient, private usuarioLogado:UsuarioLogadoService) {
   }
 
   inserir(postagem: Postagem): Observable<Postagem> {
     return this.httpClient.post<Postagem>(this.URL_postagens, postagem)
       .pipe(
-        // Ao completar a inserção com sucesso, notificar sobre a nova postagem inserida
         tap((novaPostagem: Postagem) => this.postagemInseridaSubject.next(novaPostagem))
       );
   }
@@ -28,6 +26,7 @@ export class PostagemService {
   listar(): Observable<Postagem[]> {
     return this.httpClient.get<Postagem[]>(this.URL_postagens);
   }
+
  //  listarPorId(){
   //  //    let arrayTeste = []
   //  //   this.listar().subscribe(postagens => {
@@ -36,4 +35,5 @@ export class PostagemService {
   //  //   });
   //  //
   //  // }
+
 }
