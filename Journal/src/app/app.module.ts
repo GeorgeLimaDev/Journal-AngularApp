@@ -26,15 +26,15 @@ import { UsuarioModule } from "./usuario/usuario.module";
 import { HttpClientModule } from "@angular/common/http";
 import { HomepageComponent } from './pages/homepage/homepage.component';
 import { PostagemModule } from "./postagem/postagem.module";
-import { CreateListPostsComponent } from "./create-list-posts/create-list-posts.component";
+import { CreateListPostsComponent } from "./postagem/create-list-posts/create-list-posts.component";
 import { SettingsComponent } from './shared/settings/settings.component';
 import { ProfileComponent } from "./pages/profile/profile.component";
 import { SuggestionsProfileComponent } from './shared/suggestions-profile/suggestions-profile.component';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
-import { Main1ProfileComponent } from './shared/main1-profile/main1-profile.component';
-import { Main2ProfileComponent } from './shared/main2-profile/main2-profile.component';
-
-
+import { NotificationsFeedComponent } from './shared/notifications-feed/notifications-feed.component';
+import { DadoPerfilComponent } from "./shared/dado-perfil/dado-perfil.component";
+import { MainProfileComponent } from "./shared/main-profile/main-profile.component";
+import { OwnPostsComponent } from './shared/own-posts/own-posts.component';
 
 @NgModule({
   declarations: [
@@ -51,8 +51,10 @@ import { Main2ProfileComponent } from './shared/main2-profile/main2-profile.comp
     SettingsComponent,
     ProfileComponent,
     SuggestionsProfileComponent,
-    Main1ProfileComponent,
-    Main2ProfileComponent
+    NotificationsFeedComponent,
+    DadoPerfilComponent,
+    MainProfileComponent,
+    OwnPostsComponent,
   ],
   imports: [
     BrowserModule,

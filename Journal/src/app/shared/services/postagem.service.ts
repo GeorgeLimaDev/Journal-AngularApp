@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { Postagem } from "../model/postagem";
 import {Observable, Subject, tap} from "rxjs";
+import {UsuarioLogadoService} from "./usuario-logado.service";
 
 @Injectable({
   providedIn: 'root'
@@ -12,8 +13,8 @@ export class PostagemService {
   // Subject para notificar sobre inserção de nova postagem
   private postagemInseridaSubject: Subject<Postagem> = new Subject<Postagem>();
   postagemInserida$: Observable<Postagem> = this.postagemInseridaSubject.asObservable();
-
-  constructor(private httpClient: HttpClient) {
+  private postagensUsuario:Postagem[]=[]
+  constructor(private httpClient: HttpClient, private usuarioLogado:UsuarioLogadoService) {
   }
 
   inserir(postagem: Postagem): Observable<Postagem> {
@@ -27,4 +28,12 @@ export class PostagemService {
   listar(): Observable<Postagem[]> {
     return this.httpClient.get<Postagem[]>(this.URL_postagens);
   }
+ //  listarPorId(){
+  //  //    let arrayTeste = []
+  //  //   this.listar().subscribe(postagens => {
+  //  //     console.log( postagens.filter(postagem => postagem.autor.id === this.usuarioLogado.getCurrentUser().id))
+  //  //     postagens.filter(postagem => postagem.autor.id === this.usuarioLogado.getCurrentUser().id).length;
+  //  //   });
+  //  //
+  //  // }
 }
