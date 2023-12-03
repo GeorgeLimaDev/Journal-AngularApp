@@ -11,7 +11,7 @@ export class UsuarioLogadoService implements OnInit{
   private currentUserSubject: Usuario;
 
   constructor(private httpClient: HttpClient) {
-    this.currentUserSubject = new Usuario("","","","","","", "");
+    this.currentUserSubject = new Usuario("", undefined);
     this.URL_usuarios = 'http://localhost:3000/usuarios';
   }
 

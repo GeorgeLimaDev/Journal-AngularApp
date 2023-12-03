@@ -25,7 +25,7 @@ export class HomepageComponent implements OnInit, OnDestroy {
   currentImageUrl: string = '';
   imageOpacity: number = 1;
 
-  constructor(private dialogService: DialogService, private usuarioService: UsuarioService, private authService: LoginAuthService) {
+  constructor(private dialogService: DialogService, private authService: LoginAuthService) {
     this.usuarios = [];
     this.nicknameDigitado = "";
     this.senhaDigitada = "";

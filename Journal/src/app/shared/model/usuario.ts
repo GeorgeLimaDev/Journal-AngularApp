@@ -3,24 +3,39 @@ import {Notificacao} from "./notificacao";
 import {Postagem} from "./postagem";
 
 export class Usuario {
-  constructor(
-    public id: string,
-    public nickname: string,
-    public senha: string,
-    public link: string = '',
-    public nome: string,
-    public email: string,
-    public avatar: string = "https://st3.depositphotos.com/6672868/13701/v/450/depositphotos_137014128-stock-illustration-user-profile-icon.jpg",
-    public postagens: Postagem[] = [],
-    public seguidores: Usuario[] = [],
-    public seguindo: Usuario[] = [],
-    public solicitacoes: Solicitacao[] = [],
-    public notificacoes: Notificacao[] = [],
-    public logado: boolean = false) {
-    this.link = `www.journal.app/user/${nickname}`;
+
+    id?: string;
+    nickname?: string;
+    senha?: string;
+    link: string = '';
+    nome?: string;
+    email?: string;
+    avatar: string = "https://st3.depositphotos.com/6672868/13701/v/450/depositphotos_137014128-stock-illustration-user-profile-icon.jpg";
+    postagens: Postagem[] = [];
+    seguidores: Usuario[] = [];
+    seguindo: Usuario[] = [];
+    solicitacoes: Solicitacao[] = [];
+    notificacoes: Notificacao[] = [];
+    logado: boolean = false;
+
+
+  constructor(id?: string, usuario: Usuario = {nickname: '', senha: '', link: '', nome: '', email: '', avatar: 'https://st3.depositphotos.com/6672868/13701/v/450/depositphotos_137014128-stock-illustration-user-profile-icon.jpg', postagens: [], seguidores: [], seguindo: [], solicitacoes: [], notificacoes: [], logado: false}) {
+    this.id = id;
+    this.nickname = usuario.nickname;
+    this.senha = usuario.senha;
+    this.link = usuario.link;
+    this.nome = usuario.nome;
+    this.email = usuario.email;
+    this.avatar = usuario.avatar;
+    this.postagens = usuario.postagens;
+    this.seguidores = usuario.seguidores;
+    this.seguindo = usuario.seguindo;
+    this.solicitacoes = usuario.solicitacoes;
+    this.notificacoes = usuario.notificacoes;
+    this.logado = usuario.logado;
   }
 
-  countPostagens(): number {
+  /*countPostagens(): number {
     return this.postagens.length;
   }
 
@@ -77,7 +92,7 @@ export class Usuario {
     if (index !== -1) {
       this.notificacoes.splice(index, 1);
     }
-  }
+  }*/
 
   toString(): string {
     return `

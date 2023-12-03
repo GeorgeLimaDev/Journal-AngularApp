@@ -35,6 +35,7 @@ import { NotificationsFeedComponent } from './shared/notifications-feed/notifica
 import { DadoPerfilComponent } from "./shared/dado-perfil/dado-perfil.component";
 import { MainProfileComponent } from "./shared/main-profile/main-profile.component";
 import { OwnPostsComponent } from './shared/own-posts/own-posts.component';
+import {FirestoreModule} from "./firestore/firestore.module";
 
 @NgModule({
   declarations: [
@@ -75,7 +76,8 @@ import { OwnPostsComponent } from './shared/own-posts/own-posts.component';
     UsuarioModule,
     HttpClientModule,
     PostagemModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    FirestoreModule
   ],
   exports: [
     ModalComponent,
