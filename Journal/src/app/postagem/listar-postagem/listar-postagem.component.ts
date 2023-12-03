@@ -3,6 +3,7 @@ import { Postagem } from "../../shared/model/postagem";
 import { PostagemService } from "../../shared/services/postagem.service";
 import { takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs';
+import {PostagemFirestoreService} from "../../shared/services/postagem-firestore.service";
 
 @Component({
   selector: 'app-listar-postagem',
@@ -13,15 +14,15 @@ export class ListarPostagemComponent implements OnInit {
   postagens: Postagem[] = [];
   private unsubscribe$: Subject<void> = new Subject<void>();
 
-  constructor(private postagemService: PostagemService) { }
+  constructor(private postagemService: PostagemFirestoreService) { }
 
   ngOnInit() {
     this.listar();
-    this.postagemService.postagemInserida$
+    /*this.postagemService.listar()
       .pipe(takeUntil(this.unsubscribe$))
       .subscribe(novaPostagem => {
         this.postagens.unshift(novaPostagem); // Adiciona a nova postagem no início da lista
-      });
+      });*/
   }
 
   ngOnDestroy() {

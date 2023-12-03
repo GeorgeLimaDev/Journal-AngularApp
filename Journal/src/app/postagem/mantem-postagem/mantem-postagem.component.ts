@@ -3,6 +3,7 @@ import {Usuario} from "../../shared/model/usuario";
 import {Postagem} from "../../shared/model/postagem";
 import {PostagemService} from "../../shared/services/postagem.service";
 import {UsuarioLogadoService} from "../../shared/services/usuario-logado.service"
+import {PostagemFirestoreService} from "../../shared/services/postagem-firestore.service";
 
 
 @Component({
@@ -15,17 +16,20 @@ export class MantemPostagemComponent {
   postagem: Postagem;
   postagens: Postagem[] = [];
 
-  constructor(private postagemService: PostagemService, private UsuarioLogadoService: UsuarioLogadoService) {
+  constructor(private postagemService: PostagemFirestoreService, private UsuarioLogadoService: UsuarioLogadoService) {
     this.autor = UsuarioLogadoService.getCurrentUser();
-    this.postagem = new Postagem("",this.autor, "","","",Date.now());
+    this.postagem = new Postagem("", undefined);
 
   }
 
   inserir() {
+    this.postagem.autor = this.UsuarioLogadoService.getCurrentUser().nome;
+    this.postagem.avatarAutor = this.UsuarioLogadoService.getCurrentUser().avatar;
+    this.postagem.nickAutor = this.UsuarioLogadoService.getCurrentUser().nickname;
     this.postagemService.inserir(this.postagem).subscribe(
       postagemCriada => {}
     );
-    this.postagem = new Postagem("",this.autor, "","","",Date.now());
+    this.postagem = new Postagem("", undefined);
   }
 
 }
