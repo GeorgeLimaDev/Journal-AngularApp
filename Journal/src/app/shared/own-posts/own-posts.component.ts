@@ -38,7 +38,7 @@ export class OwnPostsComponent implements OnInit {
   listar() {
     this.postagemService.listar().subscribe(postagens => {
       // @ts-ignore
-      let postagemDoUsuario: Postagem[] = postagens.filter(postagem => postagem.autor.id === this.usuarioLogado.getCurrentUser().id);
+      let postagemDoUsuario: Postagem[] = postagens.filter(postagem => postagem.nickAutor === this.usuarioLogado.getCurrentUser().nickname);
       this.postagens = postagemDoUsuario.reverse();
       this.contPostagens = this.postagens.length
     });
