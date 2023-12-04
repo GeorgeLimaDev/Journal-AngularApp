@@ -12,6 +12,7 @@
   background-size: cover;
   background-position: center;
   margin-top: 0.5rem;
+  border-radius: 50%;
 }
 
 mat-card-title {
@@ -43,6 +44,9 @@ p {
 }
 
 button {
+  margin-top: 1rem;
   margin-left: 8.5rem;
-  background-color: #edcf18;
+  background-color: transparent;
+  border: 1px solid black;
+  border-radius: 40px;
 }
