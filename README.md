@@ -6,6 +6,8 @@
 
 Um sistema web que armazena os usuários, suas postagens (incluindo seus comentários) e as listas de seguidores de cada usuário (pessoas que podem ver suas postagens restritas). O sistema também deve contar com uma interface amigável, que estimule os usuários a se expressarem com franqueza e segurança, além de estimular o engajamento entre eles.
 
+**Nota**: Ao cadastrar usuários e postagens, não informe dados sensíveis ou sigilosos tais como senhas ou endereços de email reais.
+
 ## Requisitos Funcionais:
 
 - Usuários devem ser capazes de se registrar, criando uma conta para fazer uso do sistema;
