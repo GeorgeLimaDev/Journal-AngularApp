@@ -43,6 +43,10 @@ p {
 }
 
 button {
+  color: grey;
+  margin-top: 1rem;
   margin-left: 8.5rem;
-  background-color: #edcf18;
+  background-color: transparent;
+  border: 1px solid grey;
+  border-radius: 40px;
 }
