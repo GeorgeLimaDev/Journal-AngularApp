@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { UsuarioLogadoService } from "../services/usuario-logado.service";
+import { UsuarioLogadoService } from "../shared/services/usuario-logado.service";
 import { Router } from "@angular/router";
-import {Usuario} from "../model/usuario";
-import {UsuarioFirestoreService} from "../services/usuario-firestore.service";
+import {Usuario} from "../shared/model/usuario";
+import {UsuarioFirestoreService} from "../shared/services/usuario-firestore.service";
 
 @Component({
   selector: 'app-settings',
@@ -23,6 +23,7 @@ export class SettingsComponent {
     // @ts-ignore
     this.novonome = usuarioLogado.getCurrentUser().nome;
     const idUsuario = this.usuarioLogado.getCurrentUser().id;
+    this.usuarioLogado.getCurrentUser().id = idUsuario;
     this.usuarioLogado.getCurrentUser().senha = this.novasenha;
     this.usuarioLogado.getCurrentUser().nome = this.novonome;
     this.usuarioLogado.getCurrentUser().nickname = this.novonickname;

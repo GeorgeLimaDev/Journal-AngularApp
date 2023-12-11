@@ -1,10 +1,10 @@
 import {Component, OnInit} from '@angular/core';
-import {Postagem} from "../model/postagem";
+import {Postagem} from "../shared/model/postagem";
 import {Subject} from "rxjs";
-import {PostagemService} from "../services/postagem.service";
+import {PostagemService} from "../shared/services/postagem.service";
 import {takeUntil} from "rxjs/operators";
-import {UsuarioLogadoService} from "../services/usuario-logado.service";
-import {PostagemFirestoreService} from "../services/postagem-firestore.service";
+import {UsuarioLogadoService} from "../shared/services/usuario-logado.service";
+import {PostagemFirestoreService} from "../shared/services/postagem-firestore.service";
 
 @Component({
   selector: 'app-own-posts',
@@ -37,8 +37,9 @@ export class OwnPostsComponent implements OnInit {
 
   listar() {
     this.postagemService.listar().subscribe(postagens => {
+      console.log(this.usuarioLogado.getCurrentUser());
       // @ts-ignore
-      let postagemDoUsuario: Postagem[] = postagens.filter(postagem => postagem.nickAutor === this.usuarioLogado.getCurrentUser().nickname);
+      let postagemDoUsuario: Postagem[] = postagens.filter(postagem => postagem.idAutor === this.usuarioLogado.getCurrentUser().id);
       this.postagens = postagemDoUsuario.reverse();
       this.contPostagens = this.postagens.length
     });
