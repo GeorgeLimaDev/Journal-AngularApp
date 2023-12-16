@@ -24,7 +24,7 @@ export class PostagemFirestoreService {
     return from(this.colecaoPostagens.add(Object.assign({}, postagem)));
   }
 
-  apagar(id: string): Observable<void> {
+  apagar(id: string | undefined): Observable<void> {
     return from(this.colecaoPostagens.doc(id).delete());
   }
 
@@ -33,10 +33,22 @@ export class PostagemFirestoreService {
     new Postagem(document.id, document.data())));
   }
 
+  async pesquisarPorAutor(autor: string | undefined): Promise<Postagem[]> {
+    let postagensDoUsuarioLogado = this.colecaoPostagens.ref.where('nickAutor', '==', autor).get()
+      .then(querySnapshot => querySnapshot.docs.map(doc => new Postagem(doc.id, doc.data())));
+    return await postagensDoUsuarioLogado;
+  }
+
   atualizar(postagem: Postagem): Observable<void> {
     const id = postagem.id;
     delete postagem.id;
     return from(this.colecaoPostagens.doc(id).update(Object.assign({}, postagem)));
+  }
+
+  atualizarJuntoComUsuario(postagens: Postagem[]) {
+    postagens.forEach(post => {
+      this.atualizar(post);
+    })
   }
 
 }

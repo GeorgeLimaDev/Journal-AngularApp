@@ -4,6 +4,11 @@ import { PostagemService } from "../../shared/services/postagem.service";
 import { takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs';
 import {PostagemFirestoreService} from "../../shared/services/postagem-firestore.service";
+import {UsuarioLogadoService} from "../../shared/services/usuario-logado.service";
+import {Usuario} from "../../shared/model/usuario";
+import {MantemPostagemComponent} from "../mantem-postagem/mantem-postagem.component";
+import { MatDialog } from "@angular/material/dialog";
+import {EditPostComponent} from "../../edit-post/edit-post.component";
 
 @Component({
   selector: 'app-listar-postagem',
@@ -12,9 +17,12 @@ import {PostagemFirestoreService} from "../../shared/services/postagem-firestore
 })
 export class ListarPostagemComponent implements OnInit {
   postagens: Postagem[] = [];
+  usuarioLogado: Usuario;
   private unsubscribe$: Subject<void> = new Subject<void>();
 
-  constructor(private postagemService: PostagemFirestoreService) { }
+  constructor(public dialog: MatDialog, private postagemService: PostagemFirestoreService, UsuarioLogadoService: UsuarioLogadoService) {
+    this.usuarioLogado = UsuarioLogadoService.getCurrentUser();
+  }
 
   ngOnInit() {
     this.listar();
@@ -35,5 +43,30 @@ export class ListarPostagemComponent implements OnInit {
       this.postagens = postagens.reverse();
     });
   }
+
+  editar(postagem: Postagem) {
+    this.postagemService.atualizar(postagem);
+  }
+
+  excluir(postagem: Postagem) {
+    this.postagemService.apagar(postagem.id);
+  }
+
+  postsDoUsuarioLogado(): Postagem[] {
+    let posts: Postagem[] = this.postagens;
+
+    posts = posts.filter(post => post.idAutor === this.usuarioLogado.id);
+
+    return posts;
+  }
+
+  openDialog() {
+    this.dialog.open(EditPostComponent, {
+      width: '50%'
+    })
+  }
+
+
+
 
 }

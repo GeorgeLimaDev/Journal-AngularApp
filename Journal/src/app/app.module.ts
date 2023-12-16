@@ -35,6 +35,7 @@ import { DadoPerfilComponent } from "./dado-perfil/dado-perfil.component";
 import { MainProfileComponent } from "./main-profile/main-profile.component";
 import { OwnPostsComponent } from './own-posts/own-posts.component';
 import { FirestoreModule } from "./firestore/firestore.module";
+import { EditPostComponent } from './edit-post/edit-post.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +55,7 @@ import { FirestoreModule } from "./firestore/firestore.module";
     DadoPerfilComponent,
     MainProfileComponent,
     OwnPostsComponent,
+    EditPostComponent,
   ],
   imports: [
     BrowserModule,

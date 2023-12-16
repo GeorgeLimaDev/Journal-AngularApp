@@ -15,7 +15,7 @@ export class Postagem {
   comentarios: Comentario[] = [];
   idAutor?: string;
 
-  constructor(id?: string, postagem: Postagem = {autor: '', nickAutor: '', avatarAutor: '', link: '', conteudo: '', privacidade: '', timestamp: 0, comentarios: []}) {
+  constructor(id?: string, postagem: Postagem = {autor: '', nickAutor: '', avatarAutor: '', link: '', conteudo: '', privacidade: '', timestamp: Date.now(), comentarios: []}) {
     this.id = id;
     this.autor = postagem.autor;
     this.conteudo = postagem.conteudo;
