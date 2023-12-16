@@ -22,8 +22,24 @@ export class UsuarioFirestoreService {
     return this.colecaoUsuarios.valueChanges({idField: 'id'});
   }
 
-  inserir(usuario: Usuario): Observable<object> {
+  inserir(usuario: Usuario): Observable<object> | null {
     delete usuario.id;
+    if (!usuario.nickname || usuario.nickname.trim() === '') {
+      window.alert("Nickname is invalid!");
+      return null;
+    }
+    if (!usuario.senha || usuario.senha.trim() === '') {
+      window.alert("Password is invalid!");
+      return null;
+    }
+    if (!usuario.nome || usuario.nome.trim() === '') {
+      window.alert("Name is invalid!");
+      return null;
+    }
+    if (!usuario.email || usuario.email.trim() === '') {
+      window.alert("Email is invalid!");
+      return null;
+    }
     return from(this.colecaoUsuarios.add(Object.assign({}, usuario)));
   }
 

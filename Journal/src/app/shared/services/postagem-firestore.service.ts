@@ -19,8 +19,12 @@ export class PostagemFirestoreService {
     return this.colecaoPostagens.valueChanges({idField: 'id'});
   }
 
-  inserir(postagem: Postagem): Observable<object> {
+  inserir(postagem: Postagem): Observable<object> | null {
     delete postagem.id;
+    if (!postagem.conteudo || postagem.conteudo.trim() === '') {
+      window.alert("Post content is invalid.");
+      return null;
+    }
     return from(this.colecaoPostagens.add(Object.assign({}, postagem)));
   }
 
