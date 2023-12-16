@@ -6,16 +6,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { DialogComponent } from './dialog/dialog.component';
-import { ModalComponent } from "./shared/modal/modal.component";
-import { CardPostagemComponent } from './shared/card-postagem/card-postagem.component';
-import { MenuFeedComponent } from './shared/menu-feed/menu-feed.component';
-import { PerfilFeedComponent } from './shared/perfil-feed/perfil-feed.component';
+import { ModalComponent } from "./modal/modal.component";
+import { MenuFeedComponent } from './menu-feed/menu-feed.component';
+import { PerfilFeedComponent } from './perfil-feed/perfil-feed.component';
 import { MatMenuModule } from '@angular/material/menu';
 import { FeedComponent } from './pages/feed/feed.component';
 import { RouterModule } from "@angular/router";
 import { MatCardModule } from "@angular/material/card";
 import { MatListModule } from "@angular/material/list";
-import { MainFeedComponent } from './shared/main-feed/main-feed.component';
+import { MainFeedComponent } from './main-feed/main-feed.component';
 import { MatChipsModule } from "@angular/material/chips";
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
@@ -27,22 +26,21 @@ import { HttpClientModule } from "@angular/common/http";
 import { HomepageComponent } from './pages/homepage/homepage.component';
 import { PostagemModule } from "./postagem/postagem.module";
 import { CreateListPostsComponent } from "./postagem/create-list-posts/create-list-posts.component";
-import { SettingsComponent } from './shared/settings/settings.component';
+import { SettingsComponent } from './settings/settings.component';
 import { ProfileComponent } from "./pages/profile/profile.component";
-import { SuggestionsProfileComponent } from './shared/suggestions-profile/suggestions-profile.component';
+import { SuggestionsProfileComponent } from './suggestions-profile/suggestions-profile.component';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
-import { NotificationsFeedComponent } from './shared/notifications-feed/notifications-feed.component';
-import { DadoPerfilComponent } from "./shared/dado-perfil/dado-perfil.component";
-import { MainProfileComponent } from "./shared/main-profile/main-profile.component";
-import { OwnPostsComponent } from './shared/own-posts/own-posts.component';
-import {FirestoreModule} from "./firestore/firestore.module";
+import { NotificationsFeedComponent } from './notifications-feed/notifications-feed.component';
+import { DadoPerfilComponent } from "./dado-perfil/dado-perfil.component";
+import { MainProfileComponent } from "./main-profile/main-profile.component";
+import { OwnPostsComponent } from './own-posts/own-posts.component';
+import { FirestoreModule } from "./firestore/firestore.module";
 
 @NgModule({
   declarations: [
     AppComponent,
     DialogComponent,
     ModalComponent,
-    CardPostagemComponent,
     MenuFeedComponent,
     PerfilFeedComponent,
     FeedComponent,

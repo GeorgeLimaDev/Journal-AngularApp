@@ -23,6 +23,7 @@ export class MantemPostagemComponent {
   }
 
   inserir() {
+    this.postagem.idAutor = this.UsuarioLogadoService.getCurrentUser().id;
     this.postagem.autor = this.UsuarioLogadoService.getCurrentUser().nome;
     this.postagem.avatarAutor = this.UsuarioLogadoService.getCurrentUser().avatar;
     this.postagem.nickAutor = this.UsuarioLogadoService.getCurrentUser().nickname;

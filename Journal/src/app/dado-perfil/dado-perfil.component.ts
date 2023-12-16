@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { UsuarioLogadoService } from '../services/usuario-logado.service';
-import { Usuario } from '../model/usuario';
-import {PostagemService} from "../services/postagem.service";
+import { UsuarioLogadoService } from '../shared/services/usuario-logado.service';
+import { Usuario } from '../shared/model/usuario';
+import {PostagemService} from "../shared/services/postagem.service";
 
 @Component({
   selector: 'app-dado-perfil',

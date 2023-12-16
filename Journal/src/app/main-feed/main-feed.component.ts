@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {PostagemService} from "../services/postagem.service";
-import {Postagem} from "../model/postagem";
+import {PostagemService} from "../shared/services/postagem.service";
+import {Postagem} from "../shared/model/postagem";
 
 @Component({
   selector: 'app-main-feed',
