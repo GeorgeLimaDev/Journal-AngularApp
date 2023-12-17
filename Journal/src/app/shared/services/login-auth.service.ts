@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import {UsuarioService} from "./usuario.service"
 import {Router} from "@angular/router";
 import {UsuarioLogadoService} from "./usuario-logado.service"
 import {Usuario} from "../model/usuario";

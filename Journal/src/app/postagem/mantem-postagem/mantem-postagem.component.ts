@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import {Usuario} from "../../shared/model/usuario";
 import {Postagem} from "../../shared/model/postagem";
-import {PostagemService} from "../../shared/services/postagem.service";
 import {UsuarioLogadoService} from "../../shared/services/usuario-logado.service"
 import {PostagemFirestoreService} from "../../shared/services/postagem-firestore.service";
 

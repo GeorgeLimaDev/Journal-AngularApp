@@ -11,7 +11,7 @@ export class Usuario {
     nome?: string;
     email?: string;
     avatar: string = "https://st3.depositphotos.com/6672868/13701/v/450/depositphotos_137014128-stock-illustration-user-profile-icon.jpg";
-    postagens: Postagem[] = [];
+    postagens: string[] | null = [];
     seguidores: Usuario[] = [];
     seguindo: Usuario[] = [];
     solicitacoes: Solicitacao[] = [];
@@ -93,21 +93,5 @@ export class Usuario {
       this.notificacoes.splice(index, 1);
     }
   }*/
-
-  toString(): string {
-    return `
-    Nickname: ${this.nickname}
-    Senha: ${this.senha}
-    Link: ${this.link}
-    Nome: ${this.nome}
-    Email: ${this.email}
-    Postagens: ${this.postagens.length}
-    Seguidores: ${this.seguidores.length}
-    Seguindo: ${this.seguindo.length}
-    Solicitações: ${this.solicitacoes.length}
-    Notificações: ${this.notificacoes.length}
-    Logado: ${this.logado}
-    `
-  }
 
 }

@@ -3,8 +3,6 @@ import {from, Observable, switchMap, take, toArray} from 'rxjs';
 import {Usuario} from '../model/usuario';
 import {AngularFirestore, AngularFirestoreCollection} from '@angular/fire/compat/firestore';
 import {map} from 'rxjs/operators';
-import {PostagemFirestoreService} from "./postagem-firestore.service";
-import {Postagem} from "../model/postagem";
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +12,7 @@ export class UsuarioFirestoreService {
   colecaoUsuarios: AngularFirestoreCollection<Usuario>;
   NOME_COLECAO = 'usuarios';
 
-  constructor(private afs: AngularFirestore, private postagemFirestore: PostagemFirestoreService) {
+  constructor(private afs: AngularFirestore) {
     this.colecaoUsuarios = afs.collection(this.NOME_COLECAO);
   }
 

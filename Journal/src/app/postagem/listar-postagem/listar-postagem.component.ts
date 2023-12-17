@@ -1,12 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Postagem } from "../../shared/model/postagem";
-import { PostagemService } from "../../shared/services/postagem.service";
-import { takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs';
 import {PostagemFirestoreService} from "../../shared/services/postagem-firestore.service";
 import {UsuarioLogadoService} from "../../shared/services/usuario-logado.service";
 import {Usuario} from "../../shared/model/usuario";
-import {MantemPostagemComponent} from "../mantem-postagem/mantem-postagem.component";
 import { MatDialog } from "@angular/material/dialog";
 import {EditPostComponent} from "../../edit-post/edit-post.component";
 
@@ -65,8 +62,5 @@ export class ListarPostagemComponent implements OnInit {
       width: '50%'
     })
   }
-
-
-
 
 }
