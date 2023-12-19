@@ -10,7 +10,7 @@ export class UsuarioService {
   URL_usuarios: string;
 
   constructor(private httpClient: HttpClient) {
-    this.URL_usuarios = 'http://localhost:3000/usuarios';
+    this.URL_usuarios = 'http://localhost:8080/usuarios';
   }
 
   inserir(usuario: Usuario): Observable<Usuario> {

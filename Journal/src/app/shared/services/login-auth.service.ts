@@ -2,14 +2,14 @@ import { Injectable } from '@angular/core';
 import {Router} from "@angular/router";
 import {UsuarioLogadoService} from "./usuario-logado.service"
 import {Usuario} from "../model/usuario";
-import {UsuarioFirestoreService} from "./usuario-firestore.service";
+import {UsuarioService} from "./usuario.service";
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoginAuthService {
 
-  constructor(private router: Router, private usersService: UsuarioFirestoreService, private usuarioLogadoService: UsuarioLogadoService) {
+  constructor(private router: Router, private usersService: UsuarioService, private usuarioLogadoService: UsuarioLogadoService) {
   }
 
   login(nickname:string, senha:string){

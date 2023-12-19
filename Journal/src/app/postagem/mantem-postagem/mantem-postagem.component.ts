@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import {Usuario} from "../../shared/model/usuario";
 import {Postagem} from "../../shared/model/postagem";
 import {UsuarioLogadoService} from "../../shared/services/usuario-logado.service"
-import {PostagemFirestoreService} from "../../shared/services/postagem-firestore.service";
+import {PostagemService} from "../../shared/services/postagem.service";
 
 
 @Component({
@@ -15,22 +15,23 @@ export class MantemPostagemComponent {
   postagem: Postagem;
   postagens: Postagem[] = [];
 
-  constructor(private postagemService: PostagemFirestoreService, private UsuarioLogadoService: UsuarioLogadoService) {
+  constructor(private postagemService: PostagemService, private UsuarioLogadoService: UsuarioLogadoService) {
     this.autor = UsuarioLogadoService.getCurrentUser();
-    this.postagem = new Postagem("", undefined);
+    this.postagem = new Postagem("", new Usuario("", "", "", "", "", ""), "", "", Date.now());
+
 
   }
 
   inserir() {
-    this.postagem.idAutor = this.UsuarioLogadoService.getCurrentUser().id;
-    this.postagem.autor = this.UsuarioLogadoService.getCurrentUser().nome;
-    this.postagem.avatarAutor = this.UsuarioLogadoService.getCurrentUser().avatar;
-    this.postagem.nickAutor = this.UsuarioLogadoService.getCurrentUser().nickname;
+    this.postagem.autor.id = this.UsuarioLogadoService.getCurrentUser().id;
+    this.postagem.autor.nome = this.UsuarioLogadoService.getCurrentUser().nome;
+    this.postagem.autor.avatar = this.UsuarioLogadoService.getCurrentUser().avatar;
+    this.postagem.autor.nickname = this.UsuarioLogadoService.getCurrentUser().nickname;
     // @ts-ignore
     this.postagemService.inserir(this.postagem).subscribe(
       postagemCriada => {}
     );
-    this.postagem = new Postagem("", undefined);
+    this.postagem = new Postagem("", new Usuario("", "", "", "", "", ""), "", "", Date.now());
   }
 
 }

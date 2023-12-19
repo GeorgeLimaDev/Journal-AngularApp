@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Postagem } from "../../shared/model/postagem";
 import { Subject } from 'rxjs';
-import {PostagemFirestoreService} from "../../shared/services/postagem-firestore.service";
 import {UsuarioLogadoService} from "../../shared/services/usuario-logado.service";
 import {Usuario} from "../../shared/model/usuario";
 import { MatDialog } from "@angular/material/dialog";
 import {EditPostComponent} from "../../edit-post/edit-post.component";
+import {PostagemService} from "../../shared/services/postagem.service";
 
 @Component({
   selector: 'app-listar-postagem',
@@ -17,17 +17,12 @@ export class ListarPostagemComponent implements OnInit {
   usuarioLogado: Usuario;
   private unsubscribe$: Subject<void> = new Subject<void>();
 
-  constructor(public dialog: MatDialog, private postagemService: PostagemFirestoreService, UsuarioLogadoService: UsuarioLogadoService) {
+  constructor(public dialog: MatDialog, private postagemService: PostagemService, UsuarioLogadoService: UsuarioLogadoService) {
     this.usuarioLogado = UsuarioLogadoService.getCurrentUser();
   }
 
   ngOnInit() {
     this.listar();
-    /*this.postagemService.listar()
-      .pipe(takeUntil(this.unsubscribe$))
-      .subscribe(novaPostagem => {
-        this.postagens.unshift(novaPostagem); // Adiciona a nova postagem no início da lista
-      });*/
   }
 
   ngOnDestroy() {
@@ -41,18 +36,18 @@ export class ListarPostagemComponent implements OnInit {
     });
   }
 
-  editar(postagem: Postagem) {
-    this.postagemService.atualizar(postagem);
-  }
+  //editar(postagem: Postagem) {
+  //  this.postagemService.atualizar(postagem);
+  //}
 
-  excluir(postagem: Postagem) {
-    this.postagemService.apagar(postagem.id);
-  }
+  //excluir(postagem: Postagem) {
+  //   this.postagemService.apagar(postagem.id);
+  //}
 
   postsDoUsuarioLogado(): Postagem[] {
     let posts: Postagem[] = this.postagens;
 
-    posts = posts.filter(post => post.idAutor === this.usuarioLogado.id);
+    posts = posts.filter(post => post.autor.id === this.usuarioLogado.id);
 
     return posts;
   }

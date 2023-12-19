@@ -3,10 +3,10 @@
   <mat-card-content class="post" *ngFor="let postagem of postagens">
     <mat-card-header>
       <div mat-card-avatar class="example-header-image">
-        <img class="avatarImg" src="{{postagem.avatarAutor}}" alt="">
+        <img class="avatarImg" src="{{postagem.autor.avatar}}" alt="">
       </div>
       <mat-card-title>{{postagem.autor}}</mat-card-title>
-      <mat-card-subtitle>@{{postagem.nickAutor}}</mat-card-subtitle>
+      <mat-card-subtitle>@{{postagem.autor.nickname}}</mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
       <p>

@@ -4,7 +4,6 @@ import {Subject} from "rxjs";
 import {PostagemService} from "../shared/services/postagem.service";
 import {takeUntil} from "rxjs/operators";
 import {UsuarioLogadoService} from "../shared/services/usuario-logado.service";
-import {PostagemFirestoreService} from "../shared/services/postagem-firestore.service";
 
 @Component({
   selector: 'app-own-posts',
@@ -16,18 +15,11 @@ export class OwnPostsComponent implements OnInit {
   private unsubscribe$: Subject<void> = new Subject<void>();
   contPostagens:number = 0;
 
-  constructor(private postagemService: PostagemFirestoreService, private usuarioLogado: UsuarioLogadoService) {
+  constructor(private postagemService: PostagemService, private usuarioLogado: UsuarioLogadoService) {
   }
 
   ngOnInit() {
     this.listar();
-    /*this.postagemService.listar()
-      .pipe(takeUntil(this.unsubscribe$))
-      .subscribe(novaPostagem => {
-        this.postagens.unshift(novaPostagem); // Adiciona a nova postagem no início da lista
-      });*/
-
-
   }
 
   ngOnDestroy() {

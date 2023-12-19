@@ -8,7 +8,7 @@ import {UsuarioLogadoService} from "./usuario-logado.service";
   providedIn: 'root'
 })
 export class PostagemService {
-  URL_postagens = 'http://localhost:3000/postagens';
+  URL_postagens = 'http://localhost:8080/postagens';
   private postagemInseridaSubject: Subject<Postagem> = new Subject<Postagem>();
   postagemInserida$: Observable<Postagem> = this.postagemInseridaSubject.asObservable();
   private postagensUsuario: Postagem[] = [];

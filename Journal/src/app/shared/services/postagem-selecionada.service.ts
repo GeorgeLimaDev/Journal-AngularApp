@@ -1,7 +1,7 @@
 import {Injectable, OnInit} from '@angular/core';
 import {Postagem} from "../model/postagem";
 import {Usuario} from "../model/usuario";
-import {PostagemFirestoreService} from "./postagem-firestore.service";
+import {PostagemService} from "./postagem.service";
 
 @Injectable({
   providedIn: 'root'
@@ -9,8 +9,8 @@ import {PostagemFirestoreService} from "./postagem-firestore.service";
 export class PostagemSelecionadaService implements OnInit{
   private currentUserPost: Postagem;
 
-  constructor(private postagemService: PostagemFirestoreService) {
-    this.currentUserPost = new Postagem("", undefined);
+  constructor(private postagemService: PostagemService) {
+    this.currentUserPost = new Postagem("", new Usuario("", "","","","",""), "", "", Date.now());
   }
 
   ngOnInit() {
@@ -23,10 +23,6 @@ export class PostagemSelecionadaService implements OnInit{
 
   getCurrentPost(): Postagem {
     return this.currentUserPost;
-  }
-
-  editar(postagem: Postagem) {
-    return this.postagemService.atualizar(postagem);
   }
 
 }

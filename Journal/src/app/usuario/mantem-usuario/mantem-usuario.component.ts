@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Usuario} from "../../shared/model/usuario";
 import {UsuarioService} from "../../shared/services/usuario.service";
-import {UsuarioFirestoreService} from "../../shared/services/usuario-firestore.service";
 
 @Component({
   selector: 'app-mantem-usuario',
@@ -10,8 +9,8 @@ import {UsuarioFirestoreService} from "../../shared/services/usuario-firestore.s
 })
 export class MantemUsuarioComponent implements OnInit {
   usuario: Usuario;
-  constructor(private usuarioService: UsuarioFirestoreService) {
-    this.usuario = new Usuario("",undefined);
+  constructor(private usuarioService: UsuarioService) {
+    this.usuario = new Usuario("", "", "", "", "", "");
   }
 
   ngOnInit() {
@@ -22,7 +21,7 @@ export class MantemUsuarioComponent implements OnInit {
       // @ts-ignore
     this.usuarioService.inserir(this.usuario).subscribe(usuario => {});
       window.alert(`Account ${this.usuario.nickname} was created. You can now use it to log in.`);
-      this.usuario = new Usuario('', undefined);
+      this.usuario = new Usuario("", "", "", "", "", "");
   }
 
 }
