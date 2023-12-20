@@ -21,4 +21,16 @@ export class UsuarioService {
     return this.httpClient.get<Usuario[]>(this.URL_usuarios);
   }
 
+  remover(id: string): Observable<object> {
+    return this.httpClient.delete(`${this.URL_usuarios}/${id}`);
+  }
+
+  pesquisarPorId(id: string): Observable<Usuario> {
+    return this.httpClient.get<Usuario>(`${this.URL_usuarios}/${id}`);
+  }
+
+  atualizar(usuario: Usuario): Observable<Usuario> {
+    return this.httpClient.put<Usuario>(`${this.URL_usuarios}/${usuario.id}`, usuario);
+  }
+
 }

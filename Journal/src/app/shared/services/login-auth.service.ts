@@ -13,7 +13,7 @@ export class LoginAuthService {
   }
 
   login(nickname:string, senha:string){
-    let usuarioValidado: Usuario | null = null;
+    let usuarioValidado: Usuario;
     this.usersService.listar().subscribe(usuariosListados => {
       usuariosListados.map((usuarioAtual) => {
         if(usuarioAtual.nickname == nickname && usuarioAtual.senha == senha) {

@@ -22,22 +22,23 @@ export class SettingsComponent {
     this.novasenha = usuarioLogado.getCurrentUser().senha;
     // @ts-ignore
     this.novonome = usuarioLogado.getCurrentUser().nome;
-    const idUsuario = this.usuarioLogado.getCurrentUser().id;
-    this.usuarioLogado.getCurrentUser().id = idUsuario;
+    // const idUsuario = this.usuarioLogado.getCurrentUser().id;
+    // this.usuarioLogado.getCurrentUser().id = idUsuario;
     this.usuarioLogado.getCurrentUser().senha = this.novasenha;
     this.usuarioLogado.getCurrentUser().nome = this.novonome;
     this.usuarioLogado.getCurrentUser().nickname = this.novonickname;
-    this.usuarioEditado = new Usuario(idUsuario, this.usuarioLogado.getCurrentUser().nickname, this.usuarioLogado.getCurrentUser().senha,
-      this.usuarioLogado.getCurrentUser().link, this.usuarioLogado.getCurrentUser().nome, this.usuarioLogado.getCurrentUser().email);
+    //this.usuarioEditado = new Usuario(this.usuarioLogado.getCurrentUser().id, this.usuarioLogado.getCurrentUser().nickname, this.usuarioLogado.getCurrentUser().senha,
+    // this.usuarioLogado.getCurrentUser().link, this.usuarioLogado.getCurrentUser().nome, this.usuarioLogado.getCurrentUser().email);
+    this.usuarioEditado = this.usuarioLogado.getCurrentUser();
   }
-  //remover(): void {
-  //  this.usuarioService.apagar(this.usuarioLogado.getCurrentUser().id);
-  //  this.router.navigate(['']).then();
-  //}
+  remover(): void {
+    this.usuarioService.remover(this.usuarioLogado.getCurrentUser().id);
+    this.router.navigate(['']).then();
+  }
 
-  //editar(): void {
-  //  this.usuarioLogado.setCurrentUser(this.usuarioEditado);
-  //  this.usuarioService.atualizar(this.usuarioEditado);
-  //}
+  editar(): void {
+    this.usuarioLogado.setCurrentUser(this.usuarioEditado);
+    this.usuarioService.atualizar(this.usuarioEditado);
+  }
 
 }
