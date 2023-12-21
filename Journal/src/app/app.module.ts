@@ -36,6 +36,8 @@ import { MainProfileComponent } from "./main-profile/main-profile.component";
 import { OwnPostsComponent } from './own-posts/own-posts.component';
 import { FirestoreModule } from "./firestore/firestore.module";
 import { EditPostComponent } from './edit-post/edit-post.component';
+import { InterceptoresModule } from "./interceptors/interceptors.module";
+import {MatSnackBarModule} from "@angular/material/snack-bar";
 
 @NgModule({
   declarations: [
@@ -77,7 +79,9 @@ import { EditPostComponent } from './edit-post/edit-post.component';
     HttpClientModule,
     PostagemModule,
     MatButtonToggleModule,
-    FirestoreModule
+    FirestoreModule,
+    InterceptoresModule,
+    MatSnackBarModule
   ],
   exports: [
     ModalComponent,
