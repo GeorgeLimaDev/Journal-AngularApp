@@ -41,6 +41,7 @@ export class ListarPostagemComponent implements OnInit {
   //}
 
   excluir(postagem: Postagem) {
+    console.log("Chamou excluir");
      this.postagemService.remover(postagem.id);
   }
 

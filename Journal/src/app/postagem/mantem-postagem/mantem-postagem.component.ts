@@ -3,6 +3,7 @@ import {Usuario} from "../../shared/model/usuario";
 import {Postagem} from "../../shared/model/postagem";
 import {UsuarioLogadoService} from "../../shared/services/usuario-logado.service"
 import {PostagemService} from "../../shared/services/postagem.service";
+import {MensagensService} from "../../shared/services/mensagens.service";
 
 
 @Component({
@@ -15,7 +16,7 @@ export class MantemPostagemComponent {
   postagem: Postagem;
   postagens: Postagem[] = [];
 
-  constructor(private postagemService: PostagemService, private UsuarioLogadoService: UsuarioLogadoService) {
+  constructor(private postagemService: PostagemService, private UsuarioLogadoService: UsuarioLogadoService, private mensagemService: MensagensService) {
     this.autor = UsuarioLogadoService.getCurrentUser();
     this.postagem = new Postagem("", new Usuario("", "", "", "", "", ""), "", "", Date.now());
 
@@ -29,8 +30,9 @@ export class MantemPostagemComponent {
     this.postagem.autor.nickname = this.UsuarioLogadoService.getCurrentUser().nickname;
     // @ts-ignore
     this.postagemService.inserir(this.postagem).subscribe(
-      postagemCriada => {}
-    );
+      postagemCriada => {
+        this.mensagemService.success(`Post created successfuly!`)
+      });
     this.postagem = new Postagem("", new Usuario("", "", "", "", "", ""), "", "", Date.now());
   }
 

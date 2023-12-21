@@ -38,6 +38,7 @@ export class PostagemService {
   //  // }
 
   remover(id: string): Observable<object> {
+    console.log(id);
     return this.httpClient.delete(`${this.URL_postagens}/${id}`);
   }
 
