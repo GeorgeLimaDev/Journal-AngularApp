@@ -3,6 +3,7 @@ import { HttpClient } from "@angular/common/http";
 import { Postagem } from "../model/postagem";
 import {Observable, Subject, tap} from "rxjs";
 import {UsuarioLogadoService} from "./usuario-logado.service";
+import {Usuario} from "../model/usuario";
 
 @Injectable({
   providedIn: 'root'
@@ -35,5 +36,13 @@ export class PostagemService {
   //  //   });
   //  //
   //  // }
+
+  remover(id: string): Observable<object> {
+    return this.httpClient.delete(`${this.URL_postagens}/${id}`);
+  }
+
+  atualizar(postagem: Postagem): Observable<Usuario> {
+    return this.httpClient.put<Usuario>(`${this.URL_postagens}/${postagem.id}`, postagem);
+  }
 
 }

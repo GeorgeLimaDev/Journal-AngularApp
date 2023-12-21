@@ -19,8 +19,8 @@ export class EditPostComponent {
     this.novoConteudo = this.postagemSelecionada.getCurrentPost().conteudo;
   }
 
-  // editar(postagem: Postagem) {
-  //  this.postagemSelecionada.setCurrentPost(this.postEditando);
-  //  this.postagemService.atualizar(this.postEditando);
-  //}
+  editar(postagem: Postagem) {
+   this.postagemSelecionada.setCurrentPost(this.postEditando);
+   this.postagemService.atualizar(this.postEditando);
+  }
 }

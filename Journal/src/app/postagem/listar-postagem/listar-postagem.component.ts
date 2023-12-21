@@ -40,9 +40,9 @@ export class ListarPostagemComponent implements OnInit {
   //  this.postagemService.atualizar(postagem);
   //}
 
-  //excluir(postagem: Postagem) {
-  //   this.postagemService.apagar(postagem.id);
-  //}
+  excluir(postagem: Postagem) {
+     this.postagemService.remover(postagem.id);
+  }
 
   postsDoUsuarioLogado(): Postagem[] {
     let posts: Postagem[] = this.postagens;
